@@ -13,8 +13,39 @@
     <div class="cursor-dot"></div><div class="cursor-outline"></div><div class="scroll-progress"></div>
     <nav class="navbar">
         <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
-        <ul class="nav-links"><li><a href="index.html" class="">Home</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html" class="">Portfolio</a></li><li><a href="pricing.html" class="">Pricing</a></li><li><a href="about.html" class="">About</a></li><li><a href="blog.html" class="">Blog</a></li><li><a href="contact.html" class="btn-primary">Get Started</a></li></ul>
+        <ul class="nav-links">
+            <li><a href="index.html" class="">Home</a></li>
+            <li class="dropdown">
+                <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <div class="dropdown-menu">
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="cloud.html">Cloud Infrastructure</a>
+                    <a href="digital-marketing.html">Digital Marketing</a>
+                </div>
+            </li>
+            <li><a href="portfolio.html" class="">Portfolio</a></li>
+            <li><a href="pricing.html" class="">Pricing</a></li>
+            <li><a href="about.html" class="">About</a></li>
+            <li><a href="blog.html" class="">Blog</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
+        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
+        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
+    </div>
+    
     <header class="page-header"><h1 class="reveal">Our Premium Services</h1><p class="reveal">We provide a complete suite of IT and digital services. Click on any service to explore the detailed process, tools, and deliverables.</p></header>
     <section class="section">
         <div class="grid">

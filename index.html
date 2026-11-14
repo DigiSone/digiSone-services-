@@ -13,9 +13,40 @@
     <div class="cursor-dot"></div><div class="cursor-outline"></div><div class="scroll-progress"></div>
     <nav class="navbar">
         <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
-        <ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="services.html" class="">Services</a></li><li><a href="portfolio.html" class="">Portfolio</a></li><li><a href="pricing.html" class="">Pricing</a></li><li><a href="about.html" class="">About</a></li><li><a href="blog.html" class="">Blog</a></li><li><a href="contact.html" class="btn-primary">Get Started</a></li></ul>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <div class="dropdown-menu">
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="cloud.html">Cloud Infrastructure</a>
+                    <a href="digital-marketing.html">Digital Marketing</a>
+                </div>
+            </li>
+            <li><a href="portfolio.html" class="">Portfolio</a></li>
+            <li><a href="pricing.html" class="">Pricing</a></li>
+            <li><a href="about.html" class="">About</a></li>
+            <li><a href="blog.html" class="">Blog</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
-    <header class="page-header" style="min-height: 70vh; display: flex; flex-direction: column; justify-content: center;">
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
+        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
+        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
+    </div>
+    
+    <header class="page-header" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
         <div class="reveal">
             <h1>Next-Gen IT Solutions for <br><span style="color:var(--primary);">Global Scale</span></h1>
             <p>We don't just build websites; we engineer digital ecosystems. From cloud architecture to full-scale web applications, DigiSone is your end-to-end technology partner.</p>
@@ -25,27 +56,12 @@
             </div>
         </div>
     </header>
-
-<section class="section" style="background: rgba(99,102,241,0.05); border-radius: 20px; margin-top: 40px;">
-    <h2 class="reveal">Welcome to the New Era of DigiSone</h2>
-    <p class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">We are expanding our horizons. This section contains the custom details from our latest enterprise initiative. We provide end-to-end solutions that empower your business to scale effortlessly.</p>
-</section>
-
     <section class="section">
         <h2 class="reveal">Why Choose DigiSone?</h2>
         <div class="grid">
             <div class="card reveal"><i class="fa-solid fa-bolt"></i><h3>Ultra-Fast Performance</h3><p>We leverage Edge Computing and optimized code (Jamstack) to ensure your website loads in milliseconds, anywhere in the world.</p></div>
             <div class="card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Enterprise Security</h3><p>Bank-grade security protocols, DDoS protection, and zero-trust architecture to keep your business data completely safe.</p></div>
             <div class="card reveal"><i class="fa-solid fa-headset"></i><h3>24/7 Dedicated Support</h3><p>Our expert engineering team is available round the clock to monitor, maintain, and scale your infrastructure.</p></div>
-        </div>
-    </section>
-    <section class="section" style="background: var(--surface); border-radius: 20px;">
-        <h2 class="reveal">Our Core Philosophy</h2>
-        <p class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">We believe in a "Hello to Goodbye" approach. Right from the first consultation to the final deployment and ongoing maintenance, we handle every single piece of the puzzle.</p>
-        <div class="grid">
-            <div class="process-step reveal"><h4>1. Discovery & Strategy</h4><p>We sit down with you to understand your business goals, target audience, and technical requirements.</p></div>
-            <div class="process-step reveal"><h4>2. Architecture & Design</h4><p>We design the blueprint of your digital product, focusing on UX/UI and scalable cloud infrastructure.</p></div>
-            <div class="process-step reveal"><h4>3. Development & Testing</h4><p>Our engineers write clean, secure code and rigorously test every component before launch.</p></div>
         </div>
     </section>
 
