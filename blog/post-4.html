@@ -2,29 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Deploy Your First Website Using Cloudflare Pages | DigiSone Masterclass</title>
-    <meta name="description" content="Master How to Deploy Your First Website Using Cloudflare Pages. A complete beginner to expert guide with real code, steps, and resources.">
+    <title>How to Deploy Your Website for Free with Cloudflare Pages (Step-by-Step) | DigiSone Masterclass</title>
+    <meta name="description" content="A complete beginner's guide to hosting static websites on Cloudflare Pages. Learn how to connect GitHub, set up custom domains, and go live in minutes.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .masterclass { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px; }
-        .masterclass h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
-        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .featured-img { width: 100%; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .article-container { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px; }
+        .article-container h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap; }
+        .hero-img { width: 100%; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
         .content h2 { color: var(--primary); font-size: 2rem; margin: 40px 0 20px; border-bottom: 2px solid var(--surface); padding-bottom: 10px; }
         .content h3 { color: white; font-size: 1.4rem; margin: 30px 0 15px; }
         .content p { color: var(--muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
-        .code-block { background: #1e1e1e; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 30px 0; border-left: 4px solid var(--primary); }
-        .code-block code { font-family: 'Fira Code', monospace; color: #d4d4d4; font-size: 0.95rem; }
-        .steps-list { background: var(--surface); padding: 30px; border-radius: 12px; margin: 30px 0; }
-        .steps-list h4 { color: white; margin-bottom: 20px; font-size: 1.2rem; }
-        .steps-list li { color: var(--muted); margin-bottom: 15px; line-height: 1.6; }
-        .tools-box { background: rgba(99,102,241,0.1); border: 1px solid var(--primary); padding: 30px; border-radius: 12px; margin: 40px 0; }
-        .tools-box h4 { color: var(--primary); margin-bottom: 15px; }
-        .tools-box a { color: white; text-decoration: none; border-bottom: 1px dashed var(--primary); }
-        .exercise { background: #0a0a10; border-left: 4px solid #10b981; padding: 25px; border-radius: 8px; margin: 40px 0; }
-        .exercise h4 { color: #10b981; margin-bottom: 10px; }
+        .content ul, .content ol { color: var(--muted); margin: 20px 0 20px 20px; font-size: 1.1rem; line-height: 1.8; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: white; }
+        .content pre { background: #1e1e1e; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 30px 0; border-left: 4px solid var(--primary); }
+        .content code { font-family: 'Fira Code', monospace; color: #d4d4d4; font-size: 0.95rem; }
+        .content a { color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); }
+        .content a:hover { color: white; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: none; }
     </style>
 </head>
 <body>
@@ -33,52 +31,71 @@
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../services.html">Services</a></li>
-            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../blog.html">Masterclasses</a></li>
         </ul>
     </nav>
 
-    <div class="masterclass">
-        <div class="meta"><span><i class="fa-solid fa-tag"></i> Cloud</span><span><i class="fa-solid fa-clock"></i> 15 Min Read</span><span><i class="fa-solid fa-signal"></i> Beginner to Expert</span></div>
-        <h1>How to Deploy Your First Website Using Cloudflare Pages</h1>
-        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1200&q=80" alt="How to Deploy Your First Website Using Cloudflare Pages" class="featured-img">
+    <div class="article-container">
+        <div class="meta">
+            <span><i class="fa-solid fa-tag"></i> Cloud Hosting</span>
+            <span><i class="fa-solid fa-clock"></i> 15-20 Min Read</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner to Expert</span>
+        </div>
+        <h1>How to Deploy Your Website for Free with Cloudflare Pages (Step-by-Step)</h1>
+        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1200&q=80" alt="How to Deploy Your Website for Free with Cloudflare Pages (Step-by-Step)" class="hero-img">
         
         <div class="content">
-            <h2>Introduction: Why You Need to Master This</h2>
-            <p>You've built your website. Now, how do you show it to the world? Traditionally, hosting was expensive and complicated. But today, we have Cloudflare Pages. It's free, ultra-fast, and connects directly to your GitHub. Let's get your site live in 5 minutes.</p>
             
-            <h2>The Core Concept (Explained Simply)</h2>
-            <p>Cloudflare Pages is a 'JAMstack' hosting platform. It takes your static files (HTML, CSS, JS) and serves them from the edge (CDN). This means your website loads incredibly fast anywhere in the world.</p>
-            
-            <h2>Real Code: Copy, Paste, and Run</h2>
-            <div class="code-block"><code># Terminal Commands (If using CLI)
-npm install -g wrangler
-wrangler pages project create my-site
-wrangler pages publish ./dist</code></div>
-            
-            <h2>Step-by-Step Execution</h2>
-            <div class="steps-list">
-                <h4>Follow these steps exactly:</h4>
-                <ol><li><strong>Step 1:</strong> Create a free GitHub account and upload your code.</li><li><strong>Step 2:</strong> Go to dash.cloudflare.com and sign up.</li><li><strong>Step 3:</strong> Navigate to 'Workers & Pages' -> 'Create Application' -> 'Pages'.</li><li><strong>Step 4:</strong> Click 'Connect to Git' and select your repository.</li><li><strong>Step 5:</strong> Leave the build settings blank (for static HTML) and click 'Save and Deploy'.</li><li><strong>Step 6:</strong> Your site is now live on a `.pages.dev` URL.</li></ol>
-            </div>
-            
-            <h2>Practical Exercise (Don't Skip This)</h2>
-            <div class="exercise">
-                <h4><i class="fa-solid fa-dumbbell"></i> Your Task:</h4>
-                <p>Buy a custom domain (e.g., from Namecheap) and connect it to your Cloudflare Pages project.</p>
-                <p style="margin-top:10px; font-size:0.9rem;">Struggling? Send an email to <strong>digisoneglobal@gmail.com</strong> with your code, and our team will help you out.</p>
-            </div>
-            
-            <h2>Tools & Resources Mentioned</h2>
-            <div class="tools-box">
-                <h4>🛠️ Essential Links:</h4>
-                <ul><li><a href='https://dash.cloudflare.com/' target='_blank'>Cloudflare Dashboard</a> - Official Resource</li><li><a href='https://github.com/' target='_blank'>GitHub</a> - Official Resource</li><li><a href='https://www.namecheap.com/' target='_blank'>Namecheap (Domains)</a> - Official Resource</li></ul>
-            </div>
-            
-            <h2>Conclusion & Next Steps</h2>
-            <p>Congratulations! You've just taken a massive step forward. Remember, reading without doing is just entertainment. Go back to your computer, try the exercise, and break things. That's how you learn.</p>
-            <p>If you found this valuable, share it with a friend who's starting their journey. And stay tuned for our next masterclass.</p>
-            <a href="../blog.html" class="btn-primary" style="margin-top:20px;">Back to Masterclasses</a>
+    <h2>Introduction: Why I Stopped Paying for Hosting</h2>
+    <p>For years, I paid $10-$20 a month just to host simple websites. It felt like a waste of money for small projects. Then I discovered Cloudflare Pages. It's free, it's incredibly fast, and it connects directly to GitHub. In this guide, I'm going to show you exactly how to deploy your first site. You don't need a credit card, and you don't need to be a sysadmin.</p>
+
+    <h2>What is Cloudflare Pages?</h2>
+    <p>Cloudflare Pages is a hosting platform designed for static websites (HTML, CSS, JS) and JAMstack applications. It takes your files, caches them across Cloudflare's global network (300+ data centers), and serves them to users from the nearest location. This means your website loads insanely fast, no matter where your visitors are.</p>
+
+    <h2>Core Concept: Git-Based Deployment</h2>
+    <p>The magic of Cloudflare Pages is that it connects to your GitHub repository. Every time you push a change to GitHub, Cloudflare automatically rebuilds and deploys your website. This workflow is called CI/CD (Continuous Integration/Continuous Deployment), and it's the industry standard.</p>
+
+    <h2>Step-by-Step Execution</h2>
+    <ol>
+        <li><strong>Prepare your files:</strong> Make sure you have an `index.html` file in your project folder.</li>
+        <li><strong>Create a GitHub repository:</strong> Sign up at github.com and create a new public repository. Upload your files.</li>
+        <li><strong>Sign up for Cloudflare:</strong> Go to dash.cloudflare.com and create a free account.</li>
+        <li><strong>Go to Workers & Pages:</strong> Click "Create Application" and then "Pages".</li>
+        <li><strong>Connect to Git:</strong> Choose GitHub, authorize Cloudflare, and select your repository.</li>
+        <li><strong>Configure Build Settings:</strong> For a simple static HTML site, leave the build command empty. Set the output directory to `/` (root).</li>
+        <li><strong>Save and Deploy:</strong> Click the button. Within 30 seconds, your site will be live on a `.pages.dev` URL.</li>
+    </ol>
+
+    <h2>Custom Domains (Optional but Recommended)</h2>
+    <p>If you own a domain (e.g., from Namecheap), you can connect it to your Pages project. Go to the "Custom domains" tab in Cloudflare Pages and follow the instructions. It's usually as simple as changing your nameservers or adding a CNAME record.</p>
+
+    <h2>Common Mistakes Beginners Make</h2>
+    <ul>
+        <li><strong>Using the wrong output directory:</strong> If your HTML is in a `public` folder, you must set the output directory to `public`, not `/`.</li>
+        <li><strong>Forgetting to push changes:</strong> Cloudflare only deploys what's on GitHub. If you edit locally, commit and push.</li>
+        <li><strong>Ignoring the build logs:</strong> If the deployment fails, click on the logs. They tell you exactly what went wrong.</li>
+    </ul>
+
+    <h2>Practical Exercise (Don't Skip This)</h2>
+    <p>Take a simple HTML file you've built and deploy it to Cloudflare Pages. Then, go back to GitHub, make a text change, commit, and push. Watch how Cloudflare automatically redeploys your site. If you get stuck, email me at <strong>digisoneglobal@gmail.com</strong>.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: Is it really free forever?</strong><br>A: Yes, the free tier is very generous. It offers 500 builds per month and unlimited requests. It's perfect for personal and small business sites.</p>
+    <p><strong>Q: Can I host a WordPress site on Cloudflare Pages?</strong><br>A: No, Pages is for static sites. WordPress requires a database and PHP, which are dynamic. You would need a traditional host for WordPress.</p>
+
+    <h2>Tools & Resources Mentioned</h2>
+    <ul>
+        <li><a href="https://dash.cloudflare.com/" target="_blank">Cloudflare Dashboard</a> - The main control panel.</li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a> - Where your code lives.</li>
+        <li><a href="https://pages.dev/" target="_blank">Cloudflare Pages</a> - The hosting service.</li>
+    </ul>
+
+    <h2>Conclusion & Next Steps</h2>
+    <p>You just deployed a website without spending a dime. That's a huge milestone. Next, you might want to learn about custom domains or setting up a build pipeline for a framework like React. But for now, celebrate this win!</p>
+    
         </div>
+        
+        <a href="../blog.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Masterclasses</a>
     </div>
 
     <footer style="margin-top: 80px;">

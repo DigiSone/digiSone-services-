@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Create a Progressive Web App (PWA) from Scratch | DigiSone Blog</title>
-    <meta name="description" content="A complete, beginner-friendly tutorial on How to Create a Progressive Web App (PWA) from Scratch. Learn step-by-step with real tools and resources.">
+    <title>How to Build a Fully Functional Contact Form with HTML, CSS & JavaScript | DigiSone Masterclass</title>
+    <meta name="description" content="Learn to build a contact form that actually works. Includes front-end validation and integration with a free backend service.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .blog-content { max-width: 800px; margin: 0 auto; padding: 120px 20px 60px; }
-        .blog-content h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
-        .blog-meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 15px; }
-        .blog-image { width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .blog-content h2 { color: var(--primary); font-size: 1.8rem; margin: 40px 0 20px; }
-        .blog-content h3 { color: white; font-size: 1.4rem; margin: 30px 0 15px; }
-        .blog-content p { color: var(--muted); font-size: 1.1rem; margin-bottom: 20px; line-height: 1.8; }
-        .blog-content ul, .blog-content ol { color: var(--muted); margin: 20px 0 20px 20px; font-size: 1.1rem; }
-        .blog-content li { margin-bottom: 10px; }
-        .blog-content strong { color: white; }
-        .resource-box { background: var(--surface); border-left: 4px solid var(--primary); padding: 20px; margin: 30px 0; border-radius: 8px; }
-        .resource-box h4 { color: white; margin-bottom: 10px; }
-        .resource-box a { color: var(--primary); text-decoration: none; }
-        .resource-box a:hover { text-decoration: underline; }
-        .back-btn { display: inline-block; margin-top: 30px; color: var(--primary); text-decoration: none; }
+        .article-container { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px; }
+        .article-container h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap; }
+        .hero-img { width: 100%; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .content h2 { color: var(--primary); font-size: 2rem; margin: 40px 0 20px; border-bottom: 2px solid var(--surface); padding-bottom: 10px; }
+        .content h3 { color: white; font-size: 1.4rem; margin: 30px 0 15px; }
+        .content p { color: var(--muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
+        .content ul, .content ol { color: var(--muted); margin: 20px 0 20px 20px; font-size: 1.1rem; line-height: 1.8; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: white; }
+        .content pre { background: #1e1e1e; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 30px 0; border-left: 4px solid var(--primary); }
+        .content code { font-family: 'Fira Code', monospace; color: #d4d4d4; font-size: 0.95rem; }
+        .content a { color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); }
+        .content a:hover { color: white; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: none; }
     </style>
 </head>
 <body>
@@ -31,60 +31,85 @@
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../services.html">Services</a></li>
-            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../blog.html">Masterclasses</a></li>
         </ul>
     </nav>
 
-    <div class="blog-content">
-        <div class="blog-meta"><span><i class="fa-solid fa-tag"></i> Development</span><span><i class="fa-solid fa-calendar"></i> 2024</span><span><i class="fa-solid fa-clock"></i> 10 Min Read</span></div>
-        <h1>How to Create a Progressive Web App (PWA) from Scratch</h1>
-        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="How to Create a Progressive Web App (PWA) from Scratch" class="blog-image">
-        
-        <p>Three years ago, how to create a progressive web app (pwa) from scratch was a mystery to me. Today, it's a core part of my workflow. In this post, I'm sharing the exact steps I wish someone had shown me early on.</p>
-        <p>In this comprehensive guide, I'm going to walk you through everything you need to know. No fluff, no confusing jargon—just practical steps you can apply today. Whether you're a complete beginner or looking to sharpen your skills, this tutorial is for you.</p>
-
-        <h2>Why This Matters</h2>
-        <p>Before we dive into the technical stuff, let's talk about why you should care. Understanding development isn't just about ticking a box—it's about staying competitive in a digital-first world. Companies are actively looking for people who understand these concepts, and mastering this skill can open doors you didn't even know existed.</p>
-        <p>Whether you're a freelancer, a business owner, or someone looking to switch careers, the knowledge you gain here will pay off. I've seen it firsthand in my own career.</p>
-
-        <h2>Step-by-Step Tutorial</h2>
-        <p>Okay, let's get into the good stuff. Follow these steps carefully, and don't skip any. If you get stuck, leave a comment and I'll help you out.</p>
-        
-        <h3>Step 1: Preparation</h3>
-        <p>Before you begin, make sure you have the right tools. You don't need to buy anything expensive. In fact, most of the tools I'll mention are completely free. Set aside at least 30 minutes of uninterrupted time, and grab a notebook—trust me, you'll want to take notes.</p>
-
-        <h3>Step 2: Execution</h3>
-        <p>Now, open your browser and follow along. The key here is to actually <strong>do</strong> what I'm describing, rather than just reading. I can't tell you how many times I've read a tutorial and thought I understood it, only to realize I had no idea when it came to doing it myself.</p>
-        <p>Take your time. There's no rush. If something doesn't work the first time, don't panic. Just re-read the step and try again. Technology can be finicky, but it's always solvable.</p>
-
-        <h3>Step 3: Verification</h3>
-        <p>Once you've completed the steps, it's time to verify your work. This is a crucial step that most people skip. Check your results against the criteria I outline below. If everything looks good, congratulations! You've just mastered a new skill.</p>
-
-        <h2>Common Mistakes to Avoid</h2>
-        <p>I've made every mistake in the book, so you don't have to. Here are the top things to watch out for:</p>
-        <ul>
-            <li><strong>Rushing through the basics:</strong> Skipping steps will cost you hours later.</li>
-            <li><strong>Ignoring documentation:</strong> The official docs are your best friend.</li>
-            <li><strong>Not testing in a safe environment:</strong> Always use a staging setup before going live.</li>
-        </ul>
-
-        <div class="resource-box">
-            <h4>🛠️ Tools & Resources Mentioned</h4>
-            <p>Here are the exact tools I use in my workflow:</p>
-            <ul>
-                <li><a href="https://unsplash.com" target="_blank">Unsplash</a> - For free premium images.</li>
-                <li><a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a> - For free hosting.</li>
-                <li><a href="https://github.com" target="_blank">GitHub</a> - For version control.</li>
-                <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a> - For typography.</li>
-            </ul>
+    <div class="article-container">
+        <div class="meta">
+            <span><i class="fa-solid fa-tag"></i> Web Development</span>
+            <span><i class="fa-solid fa-clock"></i> 15-20 Min Read</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner to Expert</span>
         </div>
+        <h1>How to Build a Fully Functional Contact Form with HTML, CSS & JavaScript</h1>
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80" alt="How to Build a Fully Functional Contact Form with HTML, CSS & JavaScript" class="hero-img">
+        
+        <div class="content">
+            
+    <h2>Introduction: Why Your Form Probably Doesn't Work</h2>
+    <p>Most tutorials show you how to make a contact form look pretty. They give you HTML and CSS, but they don't tell you how to actually receive the messages. If you're just using `<form action="mailto:...">`, it's unreliable and often opens the user's email client. In this guide, I'm going to show you how to build a contact form that actually sends messages to your inbox, using a free service called Formspree.</p>
 
-        <h2>Conclusion & Next Steps</h2>
-        <p>You made it! I know this was a lot to take in, but I hope it gave you a clear path forward. Remember, learning is a marathon, not a sprint. If you don't get it right the first time, that's completely normal.</p>
-        <p>Here's what I recommend you do next: Take what you've learned and apply it to a small personal project. The best way to learn is by doing. And if you have any questions, feel free to reach out to us at <strong>digisoneglobal@gmail.com</strong>.</p>
-        <p>Happy building!</p>
+    <h2>What We're Building</h2>
+    <p>A simple form with Name, Email, and Message fields. It will have client-side validation (so users can't submit empty fields). On submission, it will send the data to a backend service.</p>
 
-        <a href="../blog.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
+    <h2>Step-by-Step Execution</h2>
+    <h3>Step 1: The HTML</h3>
+    <pre><code>&lt;form id="contactForm"&gt;
+    &lt;input type="text" id="name" placeholder="Your Name" required&gt;
+    &lt;input type="email" id="email" placeholder="Your Email" required&gt;
+    &lt;textarea id="message" placeholder="Your Message" required&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <h3>Step 2: The CSS</h3>
+    <p>We'll add some basic styling to make it look clean.</p>
+    <pre><code>form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; }
+input, textarea { padding: 12px; border: 1px solid #ccc; border-radius: 6px; }
+button { padding: 12px; background: #6366f1; color: white; border: none; cursor: pointer; }</code></pre>
+
+    <h3>Step 3: The JavaScript (Validation)</h3>
+    <pre><code>document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default submission
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    if (!name || !email) {
+        alert('Please fill all fields.');
+        return;
+    }
+    alert('Message sent successfully!');
+});</code></pre>
+
+    <h3>Step 4: Making It Real with Formspree</h3>
+    <p>To actually receive emails, sign up at Formspree.io. They give you a unique URL. Change your form tag to:</p>
+    <pre><code>&lt;form action="https://formspree.io/f/YOUR_ID" method="POST"&gt;</code></pre>
+    <p>Now, when users submit the form, Formspree will forward the message to your email.</p>
+
+    <h2>Common Mistakes Beginners Make</h2>
+    <ul>
+        <li><strong>Not preventing default:</strong> Without `e.preventDefault()`, the page will reload and validation will be lost.</li>
+        <li><strong>Using `mailto`:</strong> It's unreliable. Use a backend service like Formspree.</li>
+        <li><strong>Forgetting the `name` attribute:</strong> Formspree and other services need the `name` attribute to identify the field.</li>
+    </ul>
+
+    <h2>Practical Exercise (Don't Skip This)</h2>
+    <p>Build the form, integrate Formspree, and send yourself a test message. If you get stuck, email me at <strong>digisoneglobal@gmail.com</strong>.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: Is Formspree really free?</strong><br>A: Yes, the free tier allows 50 submissions per month, which is plenty for a small site.</p>
+    <p><strong>Q: Can I build this without JavaScript?</strong><br>A: Yes, HTML5 has `required` attributes for basic validation. But JS gives a better user experience.</p>
+
+    <h2>Tools & Resources Mentioned</h2>
+    <ul>
+        <li><a href="https://formspree.io/" target="_blank">Formspree</a> - Free form backend.</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms" target="_blank">MDN Forms Guide</a> - Official docs.</li>
+    </ul>
+
+    <h2>Conclusion & Next Steps</h2>
+    <p>You've built a functional form. This is a critical skill for any web developer. Next, we'll move on to more advanced topics like APIs.</p>
+    
+        </div>
+        
+        <a href="../blog.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Masterclasses</a>
     </div>
 
     <footer style="margin-top: 80px;">

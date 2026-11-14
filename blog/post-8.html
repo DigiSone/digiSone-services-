@@ -2,29 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Responsive Design: Mobile-First Approach | DigiSone Masterclass</title>
-    <meta name="description" content="Master Mastering Responsive Design: Mobile-First Approach. A complete beginner to expert guide with real code, steps, and resources.">
+    <title>Responsive Design Masterclass: Build Mobile-First Websites That Win on Any Device | DigiSone Masterclass</title>
+    <meta name="description" content="Learn the mobile-first approach to web design. Master media queries, fluid layouts, and responsive images for a seamless user experience.">
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .masterclass { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px; }
-        .masterclass h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
-        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; }
-        .featured-img { width: 100%; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .article-container { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px; }
+        .article-container h1 { font-size: 2.8rem; margin-bottom: 20px; line-height: 1.2; }
+        .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; display: flex; gap: 20px; flex-wrap: wrap; }
+        .hero-img { width: 100%; border-radius: 16px; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
         .content h2 { color: var(--primary); font-size: 2rem; margin: 40px 0 20px; border-bottom: 2px solid var(--surface); padding-bottom: 10px; }
         .content h3 { color: white; font-size: 1.4rem; margin: 30px 0 15px; }
         .content p { color: var(--muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
-        .code-block { background: #1e1e1e; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 30px 0; border-left: 4px solid var(--primary); }
-        .code-block code { font-family: 'Fira Code', monospace; color: #d4d4d4; font-size: 0.95rem; }
-        .steps-list { background: var(--surface); padding: 30px; border-radius: 12px; margin: 30px 0; }
-        .steps-list h4 { color: white; margin-bottom: 20px; font-size: 1.2rem; }
-        .steps-list li { color: var(--muted); margin-bottom: 15px; line-height: 1.6; }
-        .tools-box { background: rgba(99,102,241,0.1); border: 1px solid var(--primary); padding: 30px; border-radius: 12px; margin: 40px 0; }
-        .tools-box h4 { color: var(--primary); margin-bottom: 15px; }
-        .tools-box a { color: white; text-decoration: none; border-bottom: 1px dashed var(--primary); }
-        .exercise { background: #0a0a10; border-left: 4px solid #10b981; padding: 25px; border-radius: 8px; margin: 40px 0; }
-        .exercise h4 { color: #10b981; margin-bottom: 10px; }
+        .content ul, .content ol { color: var(--muted); margin: 20px 0 20px 20px; font-size: 1.1rem; line-height: 1.8; }
+        .content li { margin-bottom: 10px; }
+        .content strong { color: white; }
+        .content pre { background: #1e1e1e; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 30px 0; border-left: 4px solid var(--primary); }
+        .content code { font-family: 'Fira Code', monospace; color: #d4d4d4; font-size: 0.95rem; }
+        .content a { color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); }
+        .content a:hover { color: white; }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--primary); text-decoration: none; }
     </style>
 </head>
 <body>
@@ -33,24 +31,32 @@
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../services.html">Services</a></li>
-            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../blog.html">Masterclasses</a></li>
         </ul>
     </nav>
 
-    <div class="masterclass">
-        <div class="meta"><span><i class="fa-solid fa-tag"></i> Design</span><span><i class="fa-solid fa-clock"></i> 15 Min Read</span><span><i class="fa-solid fa-signal"></i> Beginner to Expert</span></div>
-        <h1>Mastering Responsive Design: Mobile-First Approach</h1>
-        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="Mastering Responsive Design: Mobile-First Approach" class="featured-img">
+    <div class="article-container">
+        <div class="meta">
+            <span><i class="fa-solid fa-tag"></i> Web Design</span>
+            <span><i class="fa-solid fa-clock"></i> 15-20 Min Read</span>
+            <span><i class="fa-solid fa-signal"></i> Beginner to Expert</span>
+        </div>
+        <h1>Responsive Design Masterclass: Build Mobile-First Websites That Win on Any Device</h1>
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80" alt="Responsive Design Masterclass: Build Mobile-First Websites That Win on Any Device" class="hero-img">
         
         <div class="content">
-            <h2>Introduction: Why You Need to Master This</h2>
-            <p>Over 60% of web traffic comes from mobile. If your site isn't mobile-friendly, you're losing money. In this guide, I'll show you how to design for small screens first, then scale up. It's called Mobile-First Design.</p>
             
-            <h2>The Core Concept (Explained Simply)</h2>
-            <p>Media queries allow your CSS to adapt to different screen sizes. The key is to use `min-width` for mobile-first.</p>
-            
-            <h2>Real Code: Copy, Paste, and Run</h2>
-            <div class="code-block"><code>/* Mobile Default */
+    <h2>Introduction: Why I Almost Launched a Broken Website</h2>
+    <p>I had spent weeks building a stunning website. I opened it on my laptop and it looked perfect. Then, I opened it on my phone. It was a disaster. The buttons were tiny, the text overflowed, and the navigation was invisible. I was gutted. I had forgotten about mobile. In this guide, I'm going to teach you the "Mobile-First" approach so you never have to learn this lesson the hard way.</p>
+
+    <h2>What is Responsive Design?</h2>
+    <p>Responsive design is an approach where your website layout adapts to the screen size of the device. This is achieved using CSS media queries, fluid grids, and flexible images.</p>
+
+    <h2>Core Concept: Mobile-First</h2>
+    <p>Mobile-first means you design for the smallest screen first. You start with a single-column layout, then add media queries to enhance the layout for larger screens. This is the opposite of the old way, where designers built for desktop and tried to shrink it down. Mobile-first ensures your site is fast and usable on phones.</p>
+
+    <h2>Real Code: Media Queries</h2>
+    <pre><code>/* Default: Mobile styles */
 body { font-size: 16px; }
 
 /* Tablet */
@@ -61,32 +67,48 @@ body { font-size: 16px; }
 /* Desktop */
 @media (min-width: 1024px) {
     body { font-size: 20px; }
-}</code></div>
-            
-            <h2>Step-by-Step Execution</h2>
-            <div class="steps-list">
-                <h4>Follow these steps exactly:</h4>
-                <ol><li><strong>Step 1:</strong> Open your CSS file.</li><li><strong>Step 2:</strong> Remove any `max-width` queries.</li><li><strong>Step 3:</strong> Add `min-width` queries as shown above.</li><li><strong>Step 4:</strong> Resize your browser to test.</li><li><strong>Step 5:</strong> Use Chrome DevTools (F12) to simulate a mobile device.</li></ol>
-            </div>
-            
-            <h2>Practical Exercise (Don't Skip This)</h2>
-            <div class="exercise">
-                <h4><i class="fa-solid fa-dumbbell"></i> Your Task:</h4>
-                <p>Convert an existing desktop-only layout into a mobile-first design.</p>
-                <p style="margin-top:10px; font-size:0.9rem;">Struggling? Send an email to <strong>digisoneglobal@gmail.com</strong> with your code, and our team will help you out.</p>
-            </div>
-            
-            <h2>Tools & Resources Mentioned</h2>
-            <div class="tools-box">
-                <h4>🛠️ Essential Links:</h4>
-                <ul><li><a href='https://developer.chrome.com/docs/devtools/' target='_blank'>Chrome DevTools</a> - Official Resource</li><li><a href='https://responsively.app/' target='_blank'>Responsively App</a> - Official Resource</li><li><a href='https://tailwindcss.com/' target='_blank'>Tailwind CSS (Framework)</a> - Official Resource</li></ul>
-            </div>
-            
-            <h2>Conclusion & Next Steps</h2>
-            <p>Congratulations! You've just taken a massive step forward. Remember, reading without doing is just entertainment. Go back to your computer, try the exercise, and break things. That's how you learn.</p>
-            <p>If you found this valuable, share it with a friend who's starting their journey. And stay tuned for our next masterclass.</p>
-            <a href="../blog.html" class="btn-primary" style="margin-top:20px;">Back to Masterclasses</a>
+}</code></pre>
+    <p>Notice we use `min-width`. This means "apply these styles when the screen is at least this wide."</p>
+
+    <h2>Step-by-Step Execution</h2>
+    <ol>
+        <li>Open Chrome DevTools (F12).</li>
+        <li>Click the "Toggle Device Toolbar" icon (it looks like a phone).</li>
+        <li>Select a mobile device from the dropdown (e.g., iPhone 12).</li>
+        <li>Now, resize your browser window. You will see how the layout adapts. Use this tool to test your own site.</li>
+    </ol>
+
+    <h2>Responsive Images</h2>
+    <p>Images can make or break your site's speed. Use the `srcset` attribute to serve different image sizes based on the device.</p>
+    <pre><code>&lt;img src="small.jpg" srcset="medium.jpg 768w, large.jpg 1200w" alt="Description"&gt;</code></pre>
+
+    <h2>Common Mistakes Beginners Make</h2>
+    <ul>
+        <li><strong>Hiding content on mobile:</strong> Don't just hide elements; rearrange them. If it's important on desktop, it's important on mobile.</li>
+        <li><strong>Using fixed widths:</strong> Avoid `width: 1200px`. Use `max-width` or percentages.</li>
+        <li><strong>Forgetting to test on real devices:</strong> DevTools is great, but always test on an actual phone.</li>
+    </ul>
+
+    <h2>Practical Exercise (Don't Skip This)</h2>
+    <p>Take a simple HTML page and apply a mobile-first design. Create a 3-column layout on desktop that collapses to 1 column on mobile. If you get stuck, email me at <strong>digisoneglobal@gmail.com</strong>.</p>
+
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Q: Should I use a CSS framework like Bootstrap?</strong><br>A: It can speed things up, but it's important to learn the fundamentals first. Frameworks can add bloat.</p>
+    <p><strong>Q: What is a "breakpoint"?</strong><br>A: A breakpoint is the screen width at which you change the layout (e.g., 768px).</p>
+
+    <h2>Tools & Resources Mentioned</h2>
+    <ul>
+        <li><a href="https://developer.chrome.com/docs/devtools/" target="_blank">Chrome DevTools</a> - For testing responsiveness.</li>
+        <li><a href="https://responsively.app/" target="_blank">Responsively App</a> - A dedicated tool for testing multiple screens.</li>
+        <li><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> - A utility-first CSS framework.</li>
+    </ul>
+
+    <h2>Conclusion & Next Steps</h2>
+    <p>Responsive design is not optional. Most of your visitors are on mobile. Design for them first, and you'll build a better web. Next, we'll dive into performance optimization.</p>
+    
         </div>
+        
+        <a href="../blog.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Masterclasses</a>
     </div>
 
     <footer style="margin-top: 80px;">
