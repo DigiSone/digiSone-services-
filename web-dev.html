@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><title>Web Development | DigiSone</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | DigiSone Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
     <div id="preloader"><div>DigiSone <span>Services</span></div></div>
-    <nav class="navbar"><a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html" class="btn-primary">Get Started</a></li></ul></nav>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div><div class="scroll-progress"></div>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="">Home</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html" class="">Portfolio</a></li><li><a href="pricing.html" class="">Pricing</a></li><li><a href="about.html" class="">About</a></li><li><a href="blog.html" class="">Blog</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
+        </ul>
+    </nav>
     <header class="page-header"><h1 class="reveal">Web Engineering</h1><p class="reveal">Ultra-fast, SEO-optimized web applications.</p></header>
     <section class="section">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
@@ -11,5 +25,19 @@
             <a href="contact.html" class="btn-primary reveal" style="margin-top: 30px;">Start Your Project</a>
         </div>
     </section>
-    <footer><div class="footer-bottom">&copy; 2024 DigiSone Global.</div></footer><script src="script.js"></script>
-</body></html>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>DigiSone Services</h3>
+                <p>A premium initiative by DigiSone Global Enterprises.</p>
+                <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
+            </div>
+            <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div>
+            <div class="footer-col"><h4>Services</h4><a href="web-dev.html">Web Dev</a><a href="cloud.html">Cloud</a><a href="digital-marketing.html">Marketing</a></div>
+            <div class="footer-col"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
+    </footer>
+    <div id="toast" class="toast" style="position:fixed;bottom:-100px;background:#10b981;color:white;padding:12px 24px;border-radius:8px;left:50%;transform:translateX(-50%);transition:0.4s;z-index:9999;">Success</div>
+    <script src="script.js"></script></body></html>

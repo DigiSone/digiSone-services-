@@ -10,7 +10,7 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; line-heigh
 .navbar { position: fixed; top: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(3,3,5,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 1000; }
 .logo { text-decoration: none; color: white; font-weight: 900; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
 .logo span { color: var(--primary); }
-.nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+.nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; transition: 0.3s; font-weight: 500; }
 .nav-links a:hover, .nav-links a.active { color: white; }
 .btn-primary { background: white; color: black; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-block; border: none; cursor: pointer; font-size: 0.95rem; }
