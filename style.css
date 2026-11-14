@@ -19,14 +19,25 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; line-heigh
 .btn-secondary:hover { background: rgba(255,255,255,0.05); transform: translateY(-2px); }
 .page-header { padding: 180px 5% 80px; text-align: center; background: radial-gradient(circle at top, rgba(99,102,241,0.15), transparent 50%); }
 .page-header h1 { font-size: 3.5rem; margin-bottom: 15px; letter-spacing: -1.5px; }
-.page-header p { color: var(--muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
-.section { padding: 80px 5%; }
+.page-header p { color: var(--muted); font-size: 1.2rem; max-width: 800px; margin: 0 auto; }
+.section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+.section h2 { font-size: 2.2rem; margin-bottom: 30px; text-align: center; }
+.section p { color: var(--muted); font-size: 1.1rem; margin-bottom: 20px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 16px; transition: 0.3s; text-decoration: none; color: var(--text); display: block; }
 .card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 .card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
 .card h3 { font-size: 1.4rem; margin-bottom: 10px; }
 .card p { color: var(--muted); font-size: 0.95rem; }
+.feature-list { list-style: none; margin: 20px 0; }
+.feature-list li { margin-bottom: 15px; color: var(--muted); font-size: 1.05rem; display: flex; align-items: flex-start; gap: 10px; }
+.feature-list li i { color: var(--primary); margin-top: 5px; }
+.process-step { background: var(--surface); padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary); margin-bottom: 20px; }
+.process-step h4 { font-size: 1.3rem; margin-bottom: 10px; }
+.process-step p { font-size: 1rem; margin: 0; }
+.faq-item { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 15px; padding: 20px; }
+.faq-item h4 { font-size: 1.1rem; margin-bottom: 10px; color: white; }
+.faq-item p { margin: 0; font-size: 0.95rem; }
 .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .price-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.05); padding: 40px; border-radius: 16px; text-align: center; }
 .price-card.featured { border-color: var(--primary); background: rgba(99,102,241,0.05); }
@@ -36,7 +47,7 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; line-heigh
 .price-card ul li { margin-bottom: 15px; color: var(--muted); }
 .price-card ul li i { color: var(--primary); margin-right: 10px; }
 footer { background: var(--surface); padding: 80px 5% 30px; border-top: 1px solid rgba(255,255,255,0.05); }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; max-width: 1200px; margin-left: auto; margin-right: auto; }
 .footer-brand p { color: var(--muted); margin: 15px 0; font-size: 0.9rem; }
 .footer-col h4 { margin-bottom: 20px; font-size: 1.1rem; }
 .footer-col a { display: block; color: var(--muted); text-decoration: none; margin-bottom: 12px; font-size: 0.9rem; transition: 0.3s; }
