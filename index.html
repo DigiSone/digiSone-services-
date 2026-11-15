@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigiSone Services | Engineering Digital Masterpieces</title>
-    <meta name="description" content="Premium IT solutions, cloud infrastructure, and web development by DigiSone Global Enterprises.">
+    <meta name="description" content="Premium IT solutions, cloud infrastructure, and web development by DigiSone Global Enterprises. 9+ years experience, 10+ live projects.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Cursor */
+        .cursor { position: fixed; width: 30px; height: 30px; border: 2px solid var(--primary); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background 0.2s; mix-blend-mode: difference; }
+        .cursor.hover { width: 60px; height: 60px; background: rgba(99,102,241,0.2); border-color: var(--accent); }
+        @media (max-width: 768px) { .cursor { display: none; } }
+
+        /* Particle Canvas */
+        #particleCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+
+        /* Hero Section */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: radial-gradient(circle at top, #e0e7ff, white 60%); }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; padding: 0 20px; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 50px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.3); color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 30px; }
+        .hero h1 { font-size: 4.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 20px; }
+        .typing { color: var(--primary); border-right: 3px solid var(--primary); padding-right: 5px; animation: blink 1s infinite; }
+        @keyframes blink { 50% { border-color: transparent; } }
+        .hero p { font-size: 1.25rem; color: var(--muted); max-width: 700px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        
+        /* Animated Stats */
+        .stats-section { padding: 60px 5%; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+        .stat-item h3 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; }
+        .stat-item p { color: var(--muted); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+
+        /* Marquee */
+        .marquee-container { width: 100%; overflow: hidden; padding: 40px 0; background: white; border-bottom: 1px solid var(--border); }
+        .marquee-content { display: flex; gap: 60px; white-space: nowrap; animation: scroll 25s linear infinite; width: max-content; }
+        .marquee-content span { font-size: 1.4rem; font-weight: 700; color: var(--muted); display: flex; align-items: center; gap: 12px; opacity: 0.6; transition: 0.3s; }
+        .marquee-content span:hover { opacity: 1; color: var(--primary); }
+        .marquee-content i { font-size: 2rem; color: var(--primary); }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* Bento Grid */
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .bento-item { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 40px; transition: 0.3s; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+        .bento-item:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .bento-item i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .bento-item h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .bento-item p { color: var(--muted); font-size: 1rem; }
+        .bento-large { grid-column: span 2; }
+        @media (max-width: 900px) { .bento-grid { grid-template-columns: 1fr; } .bento-large { grid-column: span 1; } }
+
+        /* Real Projects Preview */
+        .project-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .preview-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 25px; transition: 0.3s; box-shadow: var(--shadow); text-decoration: none; color: var(--text); display: block; }
+        .preview-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .preview-card .domain { color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; }
+        .preview-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+        .preview-card p { color: var(--muted); font-size: 0.9rem; }
+    </style>
 </head>
 <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- NAVBAR -->
     <nav class="navbar">
         <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
@@ -30,29 +86,41 @@
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
 
+    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
-        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
-        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
 
-    <header class="page-header" style="min-height: 85vh; display: flex; flex-direction: column; justify-content: center;">
-        <div class="reveal">
-            <h1>Engineering Digital <br><span class="gradient-text">Masterpieces</span> for Global Scale</h1>
-            <p>DigiSone is not a typical agency. We are a team of architects, engineers, and strategists who build digital products that drive revenue. From Jamstack websites to enterprise cloud infrastructure—we handle the entire lifecycle.</p>
-            <div style="margin-top: 40px; display: flex; gap: 20px; justify-content: center;" class="hero-buttons">
-                <a href="services.html" class="btn-primary">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="contact.html" class="btn-secondary">Book a Consultation</a>
+    <!-- HERO SECTION (CINEMATIC) -->
+    <header class="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge reveal">🚀 9+ Years Experience · 10+ Live Projects</div>
+            <h1 class="reveal">We Build <br><span class="typing" id="typingText"></span></h1>
+            <p class="reveal">DigiSone is not a typical agency. We are architects, engineers, and strategists who build digital products that drive revenue. From Single Page Websites to enterprise cloud infrastructure—we handle the entire lifecycle.</p>
+            <div class="hero-buttons reveal">
+                <a href="services.html" class="btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Explore Services <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="contact.html" class="btn-secondary" style="padding: 16px 36px; font-size: 1.05rem;">Book a Consultation</a>
             </div>
         </div>
     </header>
 
+    <!-- STATS (ANIMATED COUNTERS) -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal"><h3 class="counter" data-target="9">0</h3><p>Years Experience</p></div>
+            <div class="stat-item reveal"><h3 class="counter" data-target="10">0</h3><p>Live Projects</p></div>
+            <div class="stat-item reveal"><h3 class="counter" data-target="12">0</h3><p>Services Offered</p></div>
+            <div class="stat-item reveal"><h3 class="counter" data-target="100">0</h3><p>Client Satisfaction %</p></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE (TRUST LOGOS) -->
     <div class="marquee-container">
         <div class="marquee-content">
             <span><i class="fa-brands fa-aws"></i> AWS</span>
@@ -61,6 +129,8 @@
             <span><i class="fa-brands fa-microsoft"></i> Azure</span>
             <span><i class="fa-brands fa-react"></i> React</span>
             <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            <span><i class="fa-brands fa-figma"></i> Figma</span>
             <span><i class="fa-brands fa-aws"></i> AWS</span>
             <span><i class="fa-brands fa-google"></i> Google Cloud</span>
             <span><i class="fa-brands fa-cloudflare"></i> Cloudflare</span>
@@ -68,6 +138,7 @@
         </div>
     </div>
 
+    <!-- WHY CHOOSE US (BENTO GRID) -->
     <section class="section">
         <div class="section-header reveal">
             <h2>Why Leading Brands Choose Us</h2>
@@ -77,67 +148,102 @@
             <div class="bento-item bento-large reveal">
                 <i class="fa-solid fa-bolt"></i>
                 <h3>Performance Obsessed</h3>
-                <p>We don't settle for "good enough". Every project is optimized for 90+ PageSpeed scores. We use Edge Computing, asset compression, and modern frameworks to ensure your site loads in milliseconds, no matter where your users are.</p>
+                <p>Every project is optimized for 90+ PageSpeed scores. We use Edge Computing, asset compression, and modern frameworks (Astro, Next.js) to ensure your site loads in milliseconds, no matter where your users are.</p>
             </div>
             <div class="bento-item reveal">
                 <i class="fa-solid fa-shield-halved"></i>
                 <h3>Enterprise Security</h3>
-                <p>Zero-trust architecture, WAF, DDoS protection, and SSL encryption. Your data is safe with us.</p>
+                <p>Zero-trust architecture, WAF, DDoS protection, SSL encryption. Your data is safe with us.</p>
             </div>
             <div class="bento-item reveal">
                 <i class="fa-solid fa-code-branch"></i>
                 <h3>Scalable Architecture</h3>
-                <p>From 100 users to 10 million. We build systems that grow with you without breaking.</p>
+                <p>From 100 users to 10 million. We build systems that grow without breaking.</p>
             </div>
             <div class="bento-item bento-large reveal">
                 <i class="fa-solid fa-headset"></i>
                 <h3>24/7 Dedicated Support</h3>
-                <p>We don't disappear after launch. Our team is available round the clock to monitor, maintain, and upgrade your infrastructure. We are your long-term technology partner.</p>
+                <p>We don't disappear after launch. Our team is available round the clock to monitor, maintain, and upgrade your infrastructure. Based in Robertsganj, UP—serving India and USA.</p>
             </div>
         </div>
     </section>
 
+    <!-- REAL PROJECTS PREVIEW -->
     <section class="section" style="background: var(--surface); border-radius: 24px;">
         <div class="section-header reveal">
-            <h2>Our Proven Process</h2>
-            <p>From concept to deployment—we have refined our workflow over years.</p>
+            <h2>Our Latest Work</h2>
+            <p>Real deployments, real users. A glimpse of what we've built.</p>
         </div>
-        <div class="process-step reveal"><h4><span>1</span> Discovery & Strategy</h4><p>We sit down with you to understand your business goals, target audience, and technical requirements. We don't write code until we understand the "why".</p></div>
-        <div class="process-step reveal"><h4><span>2</span> Architecture & Design</h4><p>We create wireframes, UI/UX mockups, and a detailed technical blueprint. You will see exactly what your product will look like before we start coding.</p></div>
-        <div class="process-step reveal"><h4><span>3</span> Agile Development</h4><p>We build in sprints, providing you with weekly demos. This ensures transparency and allows for quick course correction if needed.</p></div>
-        <div class="process-step reveal"><h4><span>4</span> QA, Launch & Support</h4><p>Rigorous testing for bugs, speed, and security. Once live, we continue to monitor and maintain your product 24/7.</p></div>
+        <div class="project-preview">
+            <a href="https://digisone.com/" target="_blank" class="preview-card reveal">
+                <div class="domain">digisone.com</div>
+                <h3>DigiSone Global</h3>
+                <p>The core digital enterprise hub showcasing scalable web solutions.</p>
+            </a>
+            <a href="https://pioneerrcmsolutions.com" target="_blank" class="preview-card reveal">
+                <div class="domain">pioneerrcmsolutions.com</div>
+                <h3>Pioneer RCM</h3>
+                <p>Advanced content management and custom enterprise software.</p>
+            </a>
+            <a href="https://sonadventure.com" target="_blank" class="preview-card reveal">
+                <div class="domain">sonadventure.com</div>
+                <h3>Son Adventure</h3>
+                <p>Immersive adventure platform exploring Sonbhadra with bookings.</p>
+            </a>
+            <a href="https://stoppage64.pages.dev" target="_blank" class="preview-card reveal">
+                <div class="domain">stoppage64.pages.dev</div>
+                <h3>Stoppage 64</h3>
+                <p>Local food-delivery web app with WhatsApp checkout.</p>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 40px;" class="reveal">
+            <a href="portfolio.html" class="btn-secondary" style="padding: 14px 32px;">View All 9 Projects <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
     </section>
 
+    <!-- SERVICES PREVIEW -->
     <section class="section">
         <div class="section-header reveal">
-            <h2>What Our Clients Say</h2>
+            <h2>What We Do</h2>
+            <p>Complete digital services from websites to marketing.</p>
         </div>
         <div class="grid">
-            <div class="testimonial reveal">
-                <i class="fa-solid fa-quote-left quote"></i>
-                <p>"DigiSone transformed our legacy site into a modern, blazing-fast application. Our conversion rate increased by 45% within 2 months."</p>
-                <div class="author">
-                    <div class="avatar">JD</div>
-                    <div class="info"><h5>John Doe</h5><p>CEO, FinTech Inc.</p></div>
-                </div>
-            </div>
-            <div class="testimonial reveal">
-                <i class="fa-solid fa-quote-left quote"></i>
-                <p>"Their cloud architecture expertise saved us thousands in monthly hosting costs. They are true professionals."</p>
-                <div class="author">
-                    <div class="avatar">AS</div>
-                    <div class="info"><h5>Alice Smith</h5><p>CTO, E-Commerce Co.</p></div>
-                </div>
-            </div>
+            <a href="services.html" class="card reveal">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Website Development</h3>
+                <p>Single Page, Business Websites, E-commerce, Web Apps. Starting ₹2,499.</p>
+            </a>
+            <a href="services.html" class="card reveal">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>SEO & Indexing</h3>
+                <p>Google Search Console, GA4, On-page SEO, Indexing. From ₹2,999/mo.</p>
+            </a>
+            <a href="services.html" class="card reveal">
+                <i class="fa-solid fa-hashtag"></i>
+                <h3>Digital Marketing</h3>
+                <p>Social Media, Google Ads, Content. From ₹2,499/mo.</p>
+            </a>
         </div>
     </section>
 
+    <!-- CTA -->
+    <section class="section" style="text-align: center; background: linear-gradient(135deg, #e0e7ff, #fce7f3); border-radius: 24px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Build Something Great?</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Let's discuss how we can help you achieve your business goals.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="reveal">
+            <a href="contact.html" class="btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Get a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://wa.me/917392965992" target="_blank" class="btn-secondary" style="padding: 16px 36px; font-size: 1.05rem;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
                 <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91-7392965992</p>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -157,20 +263,152 @@
                 <a href="terms.html">Terms of Service</a>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
+        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved. Built by Vikas Kumar Mishra.</div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                document.querySelectorAll('.reveal').forEach(function(el) {
-                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
-                });
+        // 1. Custom Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, button, .bento-item, .card').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+
+        // 2. Typing Effect
+        const words = ["Digital Masterpieces", "Web Applications", "Cloud Infrastructure", "Brand Experiences"];
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
+        const typingElement = document.getElementById('typingText');
+        
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            let typeSpeed = isDeleting ? 50 : 100;
+            
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+            
+            setTimeout(type, typeSpeed);
+        }
+        type();
+
+        // 3. Particle Network Background
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = document.querySelector('.hero').offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(99, 102, 241, 0.4)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function initParticles() {
+            particles = [];
+            const count = (canvas.width * canvas.height) / 15000;
+            for (let i = 0; i < count; i++) particles.push(new Particle());
+        }
+        initParticles();
+        
+        function connectParticles() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    const dx = particles[a].x - particles[b].x;
+                    const dy = particles[a].y - particles[b].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < 150) {
+                        ctx.strokeStyle = `rgba(99, 102, 241, ${1 - distance / 150})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        function animateParticles() {
+            requestAnimationFrame(animateParticles);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            connectParticles();
+        }
+        animateParticles();
+
+        // 4. Animated Counters
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = +entry.target.getAttribute('data-target');
+                    let count = 0;
+                    const updateCounter = () => {
+                        const increment = target / 50;
+                        if (count < target) {
+                            count += increment;
+                            entry.target.textContent = Math.ceil(count) + '+';
+                            setTimeout(updateCounter, 30);
+                        } else {
+                            entry.target.textContent = target + '+';
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(entry.target);
+                }
             });
-            document.querySelectorAll('.reveal').forEach(function(el) {
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // 5. Scroll Reveal
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
                 if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
             });
         });
+        document.querySelectorAll('.reveal').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+        });
+
         function toggleMenu() {
             document.querySelector('.mobile-menu').classList.toggle('active');
         }
