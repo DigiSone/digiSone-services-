@@ -2,19 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vikas Kumar Mishra | Portfolio | DigiSone Services</title>
-    <meta name="description" content="Portfolio of Vikas Kumar Mishra.">
+    <title>Vikas Kumar Mishra | Portfolio</title>
+    <meta name="description" content="Ultra-Premium Portfolio of Vikas Kumar Mishra. Full Stack Developer, Cloud Architect, and Digital Strategist.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Portfolio Specific Styles */
+        .profile-section { display: flex; gap: 50px; align-items: center; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; padding: 40px 0; }
+        .profile-img-container { flex: 0 0 280px; position: relative; }
+        .profile-img-container img { width: 280px; height: 340px; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow-lg); border: 6px solid white; }
+        .profile-info { flex: 1; min-width: 300px; }
+        .profile-info h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 800; letter-spacing: -1.5px; }
+        .profile-info h2 { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 20px; }
+        .profile-info p { color: var(--muted); font-size: 1.05rem; margin-bottom: 25px; line-height: 1.8; }
+        
+        .skill-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .skill-tag { background: #e0e7ff; color: var(--primary); padding: 6px 16px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; }
+        .skill-tag.pink { background: #fce7f3; color: var(--accent); }
+        .skill-tag.teal { background: #ccfbf1; color: #14b8a6; }
+        .skill-tag.yellow { background: #fef3c7; color: #d97706; }
+        
+        /* Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+        .timeline-item { position: relative; padding-left: 60px; margin-bottom: 50px; }
+        .timeline-item::before { content: ''; position: absolute; left: 11px; top: 5px; width: 20px; height: 20px; border-radius: 50%; background: white; border: 4px solid var(--primary); z-index: 2; }
+        .timeline-date { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
+        .timeline-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; }
+        .timeline-company { font-size: 1rem; color: var(--muted); font-weight: 600; margin-bottom: 15px; }
+        .timeline-desc { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+        
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .skill-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .skill-card h3 { font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .skill-card h3 i { color: var(--primary); }
+        .skill-bar { height: 8px; background: var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+        .skill-progress { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+        .skill-name { display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--muted); }
+    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
@@ -22,12 +59,14 @@
                 </div>
             </li>
             <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="pricing.html" class="">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
+    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -39,46 +78,150 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
-    
-    <header class="page-header" style="padding-bottom: 40px;">
-        <h1 class="reveal">Vikas Kumar <span class="gradient-text">Mishra</span></h1>
-        <p class="reveal">Full Stack Developer | Cloud Architect | Digital Strategist</p>
+
+    <!-- PROFILE SECTION -->
+    <header class="page-header" style="padding-bottom: 20px;">
+        <h1 class="reveal" style="font-size: 2.5rem; margin-bottom: 10px;">My Portfolio</h1>
+        <p class="reveal">A showcase of my journey, skills, and the projects I've built.</p>
     </header>
-    <section class="section" style="padding-top: 20px;">
-        <div style="display: flex; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
-            <div class="reveal" style="flex: 0 0 250px; position: relative;">
-                <img src="profile.jpg" alt="Vikas Kumar Mishra" style="width: 250px; height: 300px; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-lg); border: 4px solid white;">
+
+    <section class="section" style="padding-top: 0;">
+        <div class="profile-section reveal">
+            <div class="profile-img-container">
+                <!-- APNI PHOTO YAHAN LAGAYEIN: profile.jpg upload karein -->
+                <img src="profile.jpg" alt="Vikas Kumar Mishra">
             </div>
-            <div class="reveal" style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 2rem; margin-bottom: 20px;">About Me</h2>
-                <p style="color: var(--muted); margin-bottom: 20px;">I am a passionate Full Stack Developer with over 5 years of experience building scalable web applications. As the founder of DigiSone Global Enterprises, I lead a team of engineers to deliver enterprise-grade digital solutions.</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <span style="background: #e0e7ff; color: var(--primary); padding: 6px 14px; border-radius: 50px; font-weight: 600; font-size: 0.85rem;">React</span>
-                    <span style="background: #fce7f3; color: var(--accent); padding: 6px 14px; border-radius: 50px; font-weight: 600; font-size: 0.85rem;">Node.js</span>
-                    <span style="background: #ccfbf1; color: #14b8a6; padding: 6px 14px; border-radius: 50px; font-weight: 600; font-size: 0.85rem;">Cloudflare</span>
-                    <span style="background: #fef3c7; color: #d97706; padding: 6px 14px; border-radius: 50px; font-weight: 600; font-size: 0.85rem;">AWS</span>
+            <div class="profile-info">
+                <h1>Vikas Kumar Mishra</h1>
+                <h2>Full Stack Developer | Cloud Architect | Digital Strategist</h2>
+                <p>I am a passionate technologist with over 5 years of experience building scalable web applications and cloud infrastructure. As the founder of DigiSone Global Enterprises, I lead a team of engineers to deliver enterprise-grade digital solutions that drive business growth.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag pink">Node.js</span>
+                    <span class="skill-tag teal">Cloudflare</span>
+                    <span class="skill-tag yellow">AWS</span>
+                    <span class="skill-tag">Python</span>
                 </div>
+                <a href="contact.html" class="btn-primary">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="section-header reveal"><h2>Experience</h2></div>
-        <div class="process-step reveal"><h4><span>1</span> Founder & Lead Developer</h4><p><strong>DigiSone Global Enterprises (2022 - Present)</strong><br>Leading a team to build enterprise web applications, cloud infrastructure, and digital strategies for global clients.</p></div>
-        <div class="process-step reveal"><h4><span>2</span> Senior Full Stack Developer</h4><p><strong>TechNova Solutions (2020 - 2022)</strong><br>Developed high-traffic e-commerce platforms using React and Node.js. Reduced load times by 40%.</p></div>
-    </section>
-    <section class="section">
-        <div class="section-header reveal"><h2>Featured Projects</h2></div>
-        <div class="grid">
-            <div class="card reveal"><i class="fa-solid fa-building-columns"></i><h3>FinTech Dashboard</h3><p>Enterprise banking interface processing 1M+ transactions.</p></div>
-            <div class="card reveal"><i class="fa-solid fa-cart-shopping"></i><h3>Global E-Commerce</h3><p>High-traffic storefront with 300% faster load times.</p></div>
-            <div class="card reveal"><i class="fa-solid fa-cloud"></i><h3>SaaS Platform</h3><p>Global cloud application reducing server costs by 40%.</p></div>
         </div>
     </section>
 
+    <!-- EXPERIENCE -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Professional Experience</h2>
+            <p>My journey in the tech industry.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2022 - Present</div>
+                <h3 class="timeline-title">Founder & Lead Developer</h3>
+                <div class="timeline-company">DigiSone Global Enterprises</div>
+                <p class="timeline-desc">Leading a team of engineers to build enterprise web applications, cloud infrastructure, and digital strategies for global clients. Architected scalable solutions on Cloudflare and AWS.</p>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2020 - 2022</div>
+                <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                <div class="timeline-company">TechNova Solutions</div>
+                <p class="timeline-desc">Developed and maintained high-traffic e-commerce platforms using React, Node.js, and MongoDB. Reduced load times by 40% through performance optimization.</p>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-date">2018 - 2020</div>
+                <h3 class="timeline-title">Web Developer</h3>
+                <div class="timeline-company">Creative Pulse Agency</div>
+                <p class="timeline-desc">Built custom WordPress themes, optimized SEO for clients, and managed cloud hosting. Collaborated with designers to deliver pixel-perfect websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>My Expertise</h2>
+            <p>The technologies I work with daily.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+                <div class="skill-name"><span>React / Next.js</span> <span>95%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                <div class="skill-name" style="margin-top:15px;"><span>HTML/CSS/JS</span> <span>98%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 98%;"></div></div>
+            </div>
+            <div class="skill-card reveal">
+                <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                <div class="skill-name"><span>Node.js / Express</span> <span>90%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                <div class="skill-name" style="margin-top:15px;"><span>Python / Django</span> <span>85%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-card reveal">
+                <h3><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skill-name"><span>AWS / Cloudflare</span> <span>92%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+                <div class="skill-name" style="margin-top:15px;"><span>Docker / CI/CD</span> <span>88%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Featured Projects</h2>
+            <p>A glimpse into the digital products I have engineered.</p>
+        </div>
+        <div class="grid">
+            <div class="card reveal">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>FinTech Enterprise Portal</h3>
+                <p><strong>Tech:</strong> React, Node.js, AWS<br><strong>Result:</strong> Handled 1M+ daily transactions securely. Reduced load time from 5s to 0.8s.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>Global E-Commerce Platform</h3>
+                <p><strong>Tech:</strong> Next.js, Shopify API, Cloudflare<br><strong>Result:</strong> 300% increase in sales speed and conversion. 99.99% uptime.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>SaaS Cloud Dashboard</h3>
+                <p><strong>Tech:</strong> Vue.js, Python, PostgreSQL<br><strong>Result:</strong> Reduced server costs by 40%. Improved user retention by 25%.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTS -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Education & Certifications</h2>
+        </div>
+        <div class="grid">
+            <div class="card reveal">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Bachelor of Technology (B.Tech)</h3>
+                <p>Computer Science & Engineering<br>Graduated: 2018</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Certifications</h3>
+                <p>AWS Certified Solutions Architect<br>Google Cloud Associate Engineer<br>Issued: 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Let's Build Something Great</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">I'm available for freelance work and full-time opportunities.</p>
+        <a href="contact.html" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Get In Touch <i class="fa-solid fa-envelope"></i></a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
@@ -102,4 +245,21 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
