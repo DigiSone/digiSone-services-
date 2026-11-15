@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | DigiSone Services</title>
-    <meta name="description" content="Explore our enterprise-grade services: Web Development, Cloud Infrastructure, and Digital Marketing.">
+    <meta name="description" content="Complete digital services: Single Page Websites, Web Development, SEO, Designing, Social Media, Logo, and Google Ads. Transparent pricing.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Page-specific styles for Services */
+        /* Services Page Specific */
         .service-hero { padding: 160px 5% 80px; text-align: center; background: radial-gradient(circle at top, #e0e7ff, transparent 60%); }
         .service-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.05; }
         .service-hero p { color: var(--muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
         
-        .service-detail { display: flex; gap: 50px; align-items: flex-start; margin-bottom: 80px; }
-        .service-detail.reverse { flex-direction: row-reverse; }
-        .service-info { flex: 1; }
-        .service-info h2 { font-size: 2.2rem; margin-bottom: 20px; }
-        .service-info p { color: var(--muted); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
-        .service-features { list-style: none; margin: 30px 0; }
-        .service-features li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; color: var(--text); font-size: 1rem; }
-        .service-features li i { color: var(--primary); margin-top: 5px; }
-        .service-image { flex: 1; background: var(--surface); border-radius: 20px; padding: 40px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
-        .service-image i { font-size: 4rem; color: var(--primary); margin-bottom: 20px; }
-        .service-image h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .service-image p { color: var(--muted); font-size: 0.95rem; }
+        .service-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 40px; margin-bottom: 40px; box-shadow: var(--shadow); transition: 0.3s; }
+        .service-card:hover { box-shadow: var(--shadow-lg); border-color: var(--primary); }
+        .service-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 25px; flex-wrap: wrap; gap: 20px; }
+        .service-icon-box { width: 70px; height: 70px; border-radius: 20px; background: #e0e7ff; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--primary); }
+        .service-price-tag { background: var(--surface); border: 1px solid var(--border); padding: 10px 20px; border-radius: 50px; font-weight: 700; color: var(--primary); font-size: 1.1rem; }
         
-        @media (max-width: 900px) {
-            .service-detail, .service-detail.reverse { flex-direction: column; }
+        .service-title { font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
+        .service-desc { color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px; }
+        
+        .service-features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .service-feature { display: flex; align-items: flex-start; gap: 10px; color: var(--text); font-size: 0.95rem; }
+        .service-feature i { color: var(--primary); margin-top: 4px; }
+        
+        .service-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 15px; }
+        .tech-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tech-pill { background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+        
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .faq-question { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text); transition: 0.3s; }
+        .faq-question:hover { background: var(--surface); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s; padding: 0 25px; color: var(--muted); }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 0 25px 25px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        @media (max-width: 768px) {
+            .service-hero h1 { font-size: 2.5rem; }
+            .service-card { padding: 25px; }
         }
     </style>
 </head>
@@ -58,9 +71,6 @@
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
-        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
-        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
@@ -71,83 +81,253 @@
     <header class="service-hero">
         <div class="reveal">
             <h1>Our <span class="gradient-text">Services</span></h1>
-            <p>We provide a complete suite of enterprise-grade IT and digital services. From building high-performance websites to managing global cloud infrastructure, we are your end-to-end technology partner.</p>
+            <p>From Single Page Websites to Enterprise Web Apps, SEO, and Marketing—we provide a complete suite of digital services. Local pricing, global standards. Explore each service in detail below.</p>
         </div>
     </header>
 
-    <!-- SERVICES DETAIL -->
-    <section class="section">
-        <!-- Service 1: Web Dev -->
-        <div class="service-detail reveal">
-            <div class="service-info">
-                <h2>Web Development & Engineering</h2>
-                <p>We don't just build websites; we engineer high-performance digital products that convert visitors into customers. Every line of code is written with scalability, security, and speed in mind.</p>
-                <ul class="service-features">
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Corporate Websites:</strong> SEO-optimized, CMS-driven sites for global brands.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>E-Commerce:</strong> Secure stores with Stripe/PayPal integration.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Custom Web Apps:</strong> Dashboards, CRMs, and internal tools.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Progressive Web Apps (PWA):</strong> App-like experiences on the web.</div></li>
-                </ul>
-                <a href="web-dev.html" class="btn-primary">Explore Web Development <i class="fa-solid fa-arrow-right"></i></a>
+    <!-- SERVICES LIST -->
+    <section class="section" style="padding-top: 0;">
+        
+        <!-- 1. Single Page Website -->
+        <div class="service-card reveal" id="single-page">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-file-code"></i></div>
+                    <div>
+                        <h2 class="service-title">Single Page Website</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Perfect for portfolios, landing pages, and small businesses</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">Starting ₹2,499</div>
             </div>
-            <div class="service-image">
-                <i class="fa-solid fa-code"></i>
-                <h3>Built for Scale</h3>
-                <p>React, Next.js, Node.js, and modern frameworks for lightning-fast performance.</p>
+            <p class="service-desc">A stunning, high-performance single-page website with all essential sections—built with modern tech and fully responsive. Ideal for professionals and small businesses who need a strong online presence without complexity.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Hero, About, Services, Contact sections</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Mobile-first responsive design</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> SEO optimized + Google Analytics setup</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> WhatsApp CTA integration</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> 1 month free support</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Fast loading (90+ PageSpeed)</div>
             </div>
-        </div>
-
-        <!-- Service 2: Cloud -->
-        <div class="service-detail reverse reveal">
-            <div class="service-info">
-                <h2>Cloud Infrastructure & DevOps</h2>
-                <p>We build resilient, global-scale cloud architectures that never go down. From edge computing to serverless functions, we ensure your app is always fast and available.</p>
-                <ul class="service-features">
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Edge Computing:</strong> Deploy to 300+ data centers via Cloudflare.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Serverless:</strong> AWS Lambda & Cloudflare Workers for auto-scaling.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>CI/CD Pipelines:</strong> Automated deployments with GitHub Actions.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Security & DDoS:</strong> Enterprise-grade WAF and zero-trust security.</div></li>
-                </ul>
-                <a href="cloud.html" class="btn-primary">Explore Cloud Infrastructure <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="service-image">
-                <i class="fa-solid fa-server"></i>
-                <h3>Global Reach</h3>
-                <p>Your app is served from 300+ data centers worldwide. Latency is a thing of the past.</p>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">HTML5</span><span class="tech-pill">CSS3</span><span class="tech-pill">JavaScript</span><span class="tech-pill">Responsive</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Get This Service <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
-        <!-- Service 3: Marketing -->
-        <div class="service-detail reveal">
-            <div class="service-info">
-                <h2>Digital Marketing & Growth</h2>
-                <p>We don't just get you traffic; we get you customers. Our data-driven marketing strategies are designed to maximize ROI and build your brand presence.</p>
-                <ul class="service-features">
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>SEO:</strong> On-page, off-page, and technical SEO to rank #1.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>PPC Ads:</strong> Google Ads and Meta Ads for immediate conversions.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Content Marketing:</strong> High-quality blogs and copy that converts.</div></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Social Media:</strong> Building brand presence across all platforms.</div></li>
-                </ul>
-                <a href="digital-marketing.html" class="btn-primary">Explore Digital Marketing <i class="fa-solid fa-arrow-right"></i></a>
+        <!-- 2. Website Development -->
+        <div class="service-card reveal" id="web-dev">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <h2 class="service-title">Website Development</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Static sites, business websites, e-commerce, and web apps</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">Starting ₹4,999</div>
             </div>
-            <div class="service-image">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Data-Driven Growth</h3>
-                <p>Advanced analytics and strategies to dominate your market and drive revenue.</p>
+            <p class="service-desc">Custom websites built for your business. Whether you need a 5-page corporate site or a full-scale e-commerce store, we handle everything from design to deployment. Built with modern frameworks and optimized for speed.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Multi-page custom design</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> CMS integration (WordPress/Custom)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> E-commerce (Stripe/PayPal)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> SSL Security & DDoS protection</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> SEO ready with sitemap</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> 1-12 months support (plan dependent)</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">WordPress</span><span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">Astro</span><span class="tech-pill">Tailwind</span>
+                </div>
+                <a href="web-dev.html" class="btn-primary">View Details <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
+
+        <!-- 3. SEO & Indexing -->
+        <div class="service-card reveal" id="seo">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                    <div>
+                        <h2 class="service-title">SEO & Indexing</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Rank locally and globally</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">From ₹2,999/mo</div>
+            </div>
+            <p class="service-desc">Get found on Google. We set up Google Search Console, GA4, on-page SEO, and indexing services. Perfect for local businesses and global brands looking to increase organic traffic.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Google Search Console setup</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Google Analytics 4 (GA4)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> On-page SEO optimization</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Sitemap submission & Indexing</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Local SEO (Google Business)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Monthly performance reports</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">Search Console</span><span class="tech-pill">GA4</span><span class="tech-pill">Ahrefs</span><span class="tech-pill">IndexNow</span>
+                </div>
+                <a href="digital-marketing.html" class="btn-primary">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- 4. Website Designing -->
+        <div class="service-card reveal" id="design">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div>
+                        <h2 class="service-title">Website Designing</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Modern, conversion-focused design</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">Starting ₹2,999</div>
+            </div>
+            <p class="service-desc">Beautiful, user-friendly designs that convert. We create wireframes, interactive prototypes, and pixel-perfect UI in Figma. Perfect for businesses looking to rebrand or launch a new product.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Figma wireframes & mockups</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Interactive prototype</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Brand colour system</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Typography guidelines</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> 2 revision rounds</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Developer handoff files</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">Figma</span><span class="tech-pill">Adobe XD</span><span class="tech-pill">UI/UX</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Get This Service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- 5. Social Media Marketing -->
+        <div class="service-card reveal" id="smm">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-hashtag"></i></div>
+                    <div>
+                        <h2 class="service-title">Social Media Marketing</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Content planning, post design, and page management</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">From ₹2,499/mo</div>
+            </div>
+            <p class="service-desc">Build your brand on social media. We handle content planning, post design, captions, hashtags, and complete page management for Instagram, Facebook, LinkedIn, and more.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> 15 posts/month</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Story + Reels design</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Caption writing with hashtags</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Page management & replies</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Monthly analytics report</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Competitor analysis</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">Instagram</span><span class="tech-pill">Facebook</span><span class="tech-pill">LinkedIn</span><span class="tech-pill">Canva</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Get This Service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- 6. Logo Designing -->
+        <div class="service-card reveal" id="logo">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h2 class="service-title">Logo Designing</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Custom logo with brand mark and typography</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">Starting ₹999</div>
+            </div>
+            <p class="service-desc">A great logo is the face of your brand. We design custom logos with brand mark, typography, colour palette, and deliver all file formats (SVG, PNG, PDF). Perfect for startups and rebranding.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> 3 unique concepts</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Unlimited revisions</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> All formats (SVG/PNG/JPG/PDF)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Social media kit</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Brand guidelines document</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Full copyright transfer</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">Illustrator</span><span class="tech-pill">Figma</span><span class="tech-pill">Canva</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Get This Service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- 7. Google Ads -->
+        <div class="service-card reveal" id="ads">
+            <div class="service-top">
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="service-icon-box"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div>
+                        <h2 class="service-title">Google Ads</h2>
+                        <p style="color: var(--primary); font-weight: 600;">Search, display, and local ads setup</p>
+                    </div>
+                </div>
+                <div class="service-price-tag">From ₹2,999/mo</div>
+            </div>
+            <p class="service-desc">Get instant traffic and leads with Google Ads. We handle keyword research, ad copywriting, campaign setup, and weekly optimization to maximize your ROI.</p>
+            <div class="service-features-grid">
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Deep keyword research</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Ad copywriting (A/B testing)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Campaign setup (Search/Display)</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Landing page optimization</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Weekly bid optimization</div>
+                <div class="service-feature"><i class="fa-solid fa-check-circle"></i> Conversion tracking setup</div>
+            </div>
+            <div class="service-bottom">
+                <div class="tech-pills">
+                    <span class="tech-pill">Google Ads</span><span class="tech-pill">GA4</span><span class="tech-pill">Tag Manager</span>
+                </div>
+                <a href="contact.html" class="btn-primary">Get This Service <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
     </section>
 
     <!-- WHY CHOOSE US -->
     <section class="section" style="background: var(--surface); border-radius: 24px;">
         <div class="section-header reveal">
-            <h2>Why Choose Our Services?</h2>
+            <h2>Why Choose DigiSone?</h2>
             <p>We combine deep technical expertise with a relentless focus on business outcomes.</p>
         </div>
         <div class="grid">
-            <div class="card reveal"><i class="fa-solid fa-bolt"></i><h3>Ultra-Fast Performance</h3><p>We leverage Edge Computing and optimized code to ensure your product loads in milliseconds.</p></div>
-            <div class="card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Enterprise Security</h3><p>Bank-grade security protocols, DDoS protection, and zero-trust architecture.</p></div>
-            <div class="card reveal"><i class="fa-solid fa-headset"></i><h3>24/7 Support</h3><p>Our expert engineering team is available round the clock to monitor and maintain.</p></div>
+            <div class="card reveal"><i class="fa-solid fa-bolt"></i><h3>Ultra-Fast Delivery</h3><p>Single Page Website in 3 days. Full website in 2 weeks. We don't waste time.</p></div>
+            <div class="card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Enterprise Security</h3><p>SSL, DDoS protection, and zero-trust architecture on every project.</p></div>
+            <div class="card reveal"><i class="fa-solid fa-headset"></i><h3>Local + Global Support</h3><p>Based in Robertsganj, UP. Serving clients across India, USA, and beyond.</p></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Service FAQs</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item reveal">
+                <div class="faq-question">What is the difference between Single Page and Multi-Page Website? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>A Single Page website has all content on one scrolling page (perfect for portfolios). A Multi-Page website has separate pages for Home, About, Services, Contact, etc. (better for SEO and larger businesses).</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">Can I combine multiple services? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Yes! Most clients combine Website Development + SEO + Logo Design. We offer bundle discounts for 2+ services.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">How long does a project take? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Single Page: 3-5 days. Business Website: 1-2 weeks. E-commerce: 2-4 weeks. Custom Web App: 4-8 weeks. Timeline depends on complexity.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">Do you provide content and images? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>We provide premium stock images (Unsplash/Pexels). For content, we can write SEO-optimized copy for an additional fee, or you can provide your own.</p></div>
+            </div>
         </div>
     </section>
 
@@ -155,7 +335,10 @@
     <section class="section" style="text-align: center;">
         <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Start Your Project?</h2>
         <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Let's discuss how we can help you achieve your business goals.</p>
-        <a href="contact.html" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;" class="reveal">
+            <a href="contact.html" class="btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://wa.me/917392965992" target="_blank" class="btn-secondary" style="font-size: 1.1rem; padding: 18px 40px;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -165,6 +348,7 @@
                 <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91-7392965992</p>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -184,7 +368,7 @@
                 <a href="terms.html">Terms of Service</a>
             </div>
         </div>
-        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
+        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved. Built by Vikas Kumar Mishra.</div>
     </footer>
 
     <script>
@@ -196,6 +380,11 @@
             });
             document.querySelectorAll('.reveal').forEach(function(el) {
                 if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+            document.querySelectorAll('.faq-question').forEach(function(q) {
+                q.addEventListener('click', function() {
+                    q.parentElement.classList.toggle('active');
+                });
             });
         });
         function toggleMenu() {
