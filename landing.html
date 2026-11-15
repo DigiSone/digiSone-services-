@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiSone — Single Page Website | All Services</title>
+    <meta name="description" content="DigiSone — Complete digital agency. Web development, SEO, marketing, and 9 live projects. All in one page.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Landing Page Specific */
+        .landing-hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 160px 5% 80px; background: radial-gradient(circle at top, #e0e7ff, transparent 60%); }
+        .landing-hero h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 25px; }
+        .landing-hero p { font-size: 1.3rem; color: var(--muted); max-width: 800px; margin: 0 auto 40px; }
+        
+        .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 50px auto 0; }
+        .stat-box { background: white; border: 1px solid var(--border); padding: 30px; border-radius: 16px; text-align: center; box-shadow: var(--shadow); }
+        .stat-box h3 { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
+        .stat-box p { font-size: 0.9rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+        
+        .service-card { background: white; border: 1px solid var(--border); padding: 35px; border-radius: 20px; transition: 0.3s; box-shadow: var(--shadow); }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
+        .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .service-card .price-tag { color: var(--primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 15px; display: block; }
+        .service-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+        .service-card ul { list-style: none; padding: 0; margin-bottom: 20px; }
+        .service-card ul li { font-size: 0.9rem; color: var(--muted); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .service-card ul li i { font-size: 0.8rem; color: var(--primary); }
+        
+        .project-mini { background: white; border: 1px solid var(--border); padding: 25px; border-radius: 16px; transition: 0.3s; box-shadow: var(--shadow); }
+        .project-mini:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .project-mini h4 { font-size: 1.1rem; margin-bottom: 5px; }
+        .project-mini .domain { font-size: 0.8rem; color: var(--primary); margin-bottom: 10px; word-break: break-all; }
+        .project-mini p { font-size: 0.85rem; color: var(--muted); margin-bottom: 15px; }
+        .project-mini a { font-size: 0.85rem; color: var(--primary); font-weight: 600; text-decoration: none; }
+        
+        .contact-cta { background: var(--text); color: white; padding: 80px 5%; border-radius: 30px; text-align: center; max-width: 1000px; margin: 80px auto; }
+        .contact-cta h2 { font-size: 2.5rem; margin-bottom: 20px; color: white; }
+        .contact-cta p { color: #94a3b8; margin-bottom: 40px; font-size: 1.1rem; }
+        .contact-cta .btn-primary { background: white; color: var(--text); }
+        .contact-cta .btn-primary:hover { background: var(--primary); color: white; }
+        
+        @media (max-width: 768px) {
+            .landing-hero h1 { font-size: 2.5rem; }
+            .stats-strip { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (Custom for Single Page) -->
+    <nav class="navbar">
+        <a href="landing.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="index.html">Full Site</a></li>
+            <li><a href="#contact" class="btn-primary">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#hero" onclick="toggleMenu()">Home</a>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+        <a href="index.html">Full Site</a>
+        <a href="#contact" class="btn-primary" style="text-align:center; margin-top:10px;" onclick="toggleMenu()">Get Started</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="landing-hero" id="hero">
+        <div class="reveal">
+            <div style="display: inline-block; padding: 8px 20px; background: #e0e7ff; color: var(--primary); border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 25px;">
+                ⭐ 9+ Live Projects · 9+ Years Experience
+            </div>
+            <h1>The <span class="gradient-text">Autonomous</span><br>Digital Agency.</h1>
+            <p>We build high-performance websites, SEO-optimized platforms, and AI-powered digital experiences. Local pricing, global standards.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#services" class="btn-primary" style="padding: 18px 40px; font-size: 1.1rem;">Explore Services <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="#contact" class="btn-secondary" style="padding: 18px 40px; font-size: 1.1rem;">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATS -->
+    <section class="section" style="padding-top: 0;">
+        <div class="stats-strip reveal">
+            <div class="stat-box"><h3>9+</h3><p>Years Exp</p></div>
+            <div class="stat-box"><h3>10+</h3><p>Live Projects</p></div>
+            <div class="stat-box"><h3>100%</h3><p>Client Satisfaction</p></div>
+            <div class="stat-box"><h3>24/7</h3><p>Support</p></div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="background: var(--surface); border-radius: 30px;">
+        <div class="section-header reveal">
+            <h2>Our Premium Services</h2>
+            <p>Everything you need to grow your business online.</p>
+        </div>
+        <div class="grid">
+            <!-- Web Dev -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-code"></i>
+                <h3>Website Development</h3>
+                <span class="price-tag">from ₹4,999</span>
+                <p>Static sites, business websites, e-commerce, and web apps.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Mobile-first design</li>
+                    <li><i class="fa-solid fa-check"></i> SSL Security</li>
+                    <li><i class="fa-solid fa-check"></i> SEO Ready</li>
+                </ul>
+                <a href="web-dev.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+            </div>
+            <!-- SEO -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>SEO & Indexing</h3>
+                <span class="price-tag">from ₹2,999/mo</span>
+                <p>Rank locally and globally. Google Search Console, GA4, on-page SEO.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Google Search Console</li>
+                    <li><i class="fa-solid fa-check"></i> GA4 Setup</li>
+                    <li><i class="fa-solid fa-check"></i> Sitemap Submission</li>
+                </ul>
+                <a href="digital-marketing.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+            </div>
+            <!-- Design -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Website Designing</h3>
+                <span class="price-tag">from ₹2,999</span>
+                <p>Modern, conversion-focused design — Figma wireframes & mockups.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Figma wireframes</li>
+                    <li><i class="fa-solid fa-check"></i> Interactive prototype</li>
+                    <li><i class="fa-solid fa-check"></i> 2 revisions</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">Get Quote</a>
+            </div>
+            <!-- Marketing -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Social Media Marketing</h3>
+                <span class="price-tag">from ₹2,499/mo</span>
+                <p>Content planning, post design, captions, and page management.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 15 posts/month</li>
+                    <li><i class="fa-solid fa-check"></i> Story + Reels</li>
+                    <li><i class="fa-solid fa-check"></i> Caption Writing</li>
+                </ul>
+                <a href="digital-marketing.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+            </div>
+            <!-- Logo -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Logo Designing</h3>
+                <span class="price-tag">from ₹999</span>
+                <p>Custom logo design with brand mark, typography, colour palette.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 3 Concepts</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
+                    <li><i class="fa-solid fa-check"></i> All Formats</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">Get Quote</a>
+            </div>
+            <!-- Ads -->
+            <div class="service-card reveal">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Google Ads</h3>
+                <span class="price-tag">from ₹2,999/mo</span>
+                <p>Search, display, and local ads setup, keyword research, ad copy.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Keyword Research</li>
+                    <li><i class="fa-solid fa-check"></i> Ad Copywriting</li>
+                    <li><i class="fa-solid fa-check"></i> Weekly Optimization</li>
+                </ul>
+                <a href="digital-marketing.html" class="btn-secondary" style="width: 100%; justify-content: center; padding: 10px;">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS (9 Real Live) -->
+    <section class="section" id="projects">
+        <div class="section-header reveal">
+            <h2>9 Live Projects</h2>
+            <p>Real deployments, real users. Click to visit live sites.</p>
+        </div>
+        <div class="grid">
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-building-columns" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>DigiSone Global</h4>
+                <div class="domain">digisone.com</div>
+                <p>The core digital enterprise hub.</p>
+                <a href="https://digisone.com/" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-gears" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Pioneer RCM</h4>
+                <div class="domain">pioneerrcmsolutions.com</div>
+                <p>Enterprise RCM web presence.</p>
+                <a href="https://pioneerrcmsolutions.com" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-mountain" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Son Adventure</h4>
+                <div class="domain">sonadventure.com</div>
+                <p>Tourism portal with bookings.</p>
+                <a href="https://sonadventure.com" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-cloud" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Target Enterprises</h4>
+                <div class="domain">target-enterprises.pages.dev</div>
+                <p>Edge-deployed business portal.</p>
+                <a href="https://target-enterprises.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-flask" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Bio Solution Labs</h4>
+                <div class="domain">biosolution-labs.pages.dev</div>
+                <p>Laboratory information system.</p>
+                <a href="https://biosolution-labs.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-om" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Mahant Mrityunjay</h4>
+                <div class="domain">mahantmrityunjaytripathi.pages.dev</div>
+                <p>Spiritual digital sanctuary.</p>
+                <a href="https://mahantmrityunjaytripathi.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-hands-praying" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Jeevan Jyoti Seva</h4>
+                <div class="domain">jeevanjyotisevasansthan.pages.dev</div>
+                <p>NGO welfare portal.</p>
+                <a href="https://jeevanjyotisevasansthan.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-heart-pulse" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Jeevan Jyoti Rehab</h4>
+                <div class="domain">jeevanjyotirehab.pages.dev</div>
+                <p>Healthcare rehabilitation portal.</p>
+                <a href="https://jeevanjyotirehab.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="project-mini reveal">
+                <i class="fa-solid fa-utensils" style="font-size: 1.5rem; color: var(--primary); margin-bottom: 10px;"></i>
+                <h4>Stoppage 64</h4>
+                <div class="domain">stoppage64.pages.dev</div>
+                <p>Local food-delivery app.</p>
+                <a href="https://stoppage64.pages.dev" target="_blank">Visit Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING QUICK SUMMARY -->
+    <section class="section" id="pricing" style="background: var(--surface); border-radius: 30px;">
+        <div class="section-header reveal">
+            <h2>Quick Pricing Summary</h2>
+            <p>All prices are starting points. Contact for exact quote.</p>
+        </div>
+        <div class="grid" style="max-width: 1000px; margin: 0 auto;">
+            <div class="price-card reveal" style="padding: 30px;">
+                <h3 style="font-size: 1.2rem;">Website Development</h3>
+                <div class="price" style="font-size: 2.2rem; margin: 15px 0;">₹4,999<span>+</span></div>
+                <p style="color: var(--muted); font-size: 0.9rem;">5 pages, responsive, SEO ready.</p>
+            </div>
+            <div class="price-card featured reveal" style="padding: 30px;">
+                <h3 style="font-size: 1.2rem;">SEO & Indexing</h3>
+                <div class="price" style="font-size: 2.2rem; margin: 15px 0;">₹2,999<span>/mo</span></div>
+                <p style="color: var(--muted); font-size: 0.9rem;">Search Console, GA4, on-page SEO.</p>
+            </div>
+            <div class="price-card reveal" style="padding: 30px;">
+                <h3 style="font-size: 1.2rem;">Social Media</h3>
+                <div class="price" style="font-size: 2.2rem; margin: 15px 0;">₹2,499<span>/mo</span></div>
+                <p style="color: var(--muted); font-size: 0.9rem;">15 posts, reels, captions.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;" class="reveal">
+            <a href="pricing.html" class="btn-primary" style="padding: 16px 36px; font-size: 1rem;">View Full Pricing <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta reveal" id="contact">
+        <h2>Ready to Scale Your Business?</h2>
+        <p>Chat on WhatsApp or send us an email. Free consultation, no commitment.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/917392965992" target="_blank" class="btn-primary" style="padding: 18px 40px; font-size: 1.1rem;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Now</a>
+            <a href="mailto:vikas@digisone.com" class="btn-secondary" style="padding: 18px 40px; font-size: 1.1rem; color: white; border-color: #475569;"><i class="fa-solid fa-envelope"></i> Email Us</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
+                <p>A premium initiative by DigiSone Global Enterprises.</p>
+                <p><i class="fa-solid fa-envelope"></i> vikas@digisone.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91-7392965992</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Full Site</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved. Built by Vikas Kumar Mishra.</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if(target) target.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | DigiSone Services</title>
-    <meta name="description" content="Transparent pricing for web development, SEO, and marketing.">
+    <meta name="description" content="Transparent pricing for Web Development, SEO, Marketing, and more.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
             <li><a href="portfolio.html" class="">Portfolio</a></li>
             <li><a href="pricing.html" class="active">Pricing</a></li>
             <li><a href="about.html" class="">About</a></li>
+            <li><a href="landing.html" style="color: var(--primary); font-weight: 700;">⭐ Single Page</a></li>
             <li><a href="contact.html" class="btn-primary ">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
@@ -35,62 +36,154 @@
         <a href="portfolio.html">Portfolio</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
+        <a href="landing.html">⭐ Single Page</a>
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
     
     <header class="page-header">
         <div class="reveal">
             <h1>Transparent <span class="gradient-text">Pricing</span></h1>
-            <p>No hidden fees. Local pricing, global standards. Select what you need, and see the estimated cost instantly.</p>
+            <p>No hidden fees. Local pricing, global standards. Choose a service below to see exact packages.</p>
         </div>
     </header>
 
-    <section class="section" style="padding-top: 0;">
+    <!-- WEBSITE DEVELOPMENT -->
+    <section class="section" style="padding-bottom: 40px;">
+        <div class="section-header reveal">
+            <h2>💻 Website Development</h2>
+            <p>From simple landing pages to complex e-commerce stores.</p>
+        </div>
         <div class="pricing-grid">
             <div class="price-card reveal">
-                <h3>Website Development</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Static, business, e-commerce, web apps</p>
-                <div class="price">₹4,999<span>+</span></div>
+                <h3>Starter</h3>
+                <div class="price">₹4,999</div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Mobile-first design</li>
-                    <li><i class="fa-solid fa-check"></i> SSL Security</li>
-                    <li><i class="fa-solid fa-check"></i> SEO Ready</li>
-                    <li><i class="fa-solid fa-check"></i> CMS Integration</li>
-                    <li><i class="fa-solid fa-check"></i> 1 month support</li>
+                    <li><i class="fa-solid fa-check"></i> 5 Pages</li>
+                    <li><i class="fa-solid fa-check"></i> Mobile Responsive</li>
+                    <li><i class="fa-solid fa-check"></i> Contact Form</li>
+                    <li><i class="fa-solid fa-check"></i> Basic SEO</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Starter</a>
+            </div>
+            <div class="price-card featured reveal">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">POPULAR</div>
+                <h3>Business</h3>
+                <div class="price">₹9,999</div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 10 Pages</li>
+                    <li><i class="fa-solid fa-check"></i> CMS Panel</li>
+                    <li><i class="fa-solid fa-check"></i> WhatsApp Integration</li>
+                    <li><i class="fa-solid fa-check"></i> 3 Months Support</li>
+                </ul>
+                <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Choose Business</a>
+            </div>
+            <div class="price-card reveal">
+                <h3>Premium</h3>
+                <div class="price">₹24,999+</div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Pages</li>
+                    <li><i class="fa-solid fa-check"></i> E-commerce</li>
+                    <li><i class="fa-solid fa-check"></i> Custom Features</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Year Support</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Premium</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO & INDEXING -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>📈 SEO & Indexing</h2>
+            <p>Rank locally and globally with proven SEO strategies.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card reveal">
+                <h3>Local</h3>
+                <div class="price">₹2,999<span>/mo</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 10 Keywords</li>
+                    <li><i class="fa-solid fa-check"></i> GMB Optimization</li>
+                    <li><i class="fa-solid fa-check"></i> Search Console Setup</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Local</a>
+            </div>
+            <div class="price-card featured reveal">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">POPULAR</div>
+                <h3>Growth</h3>
+                <div class="price">₹5,999<span>/mo</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 30 Keywords</li>
+                    <li><i class="fa-solid fa-check"></i> Backlinks</li>
+                    <li><i class="fa-solid fa-check"></i> GA4 Setup</li>
+                    <li><i class="fa-solid fa-check"></i> Monthly Reports</li>
+                </ul>
+                <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Choose Growth</a>
+            </div>
+            <div class="price-card reveal">
+                <h3>Programmatic</h3>
+                <div class="price">₹12,999+<span>/mo</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 1000+ Pages</li>
+                    <li><i class="fa-solid fa-check"></i> Automation</li>
+                    <li><i class="fa-solid fa-check"></i> Multi-region Indexing</li>
+                    <li><i class="fa-solid fa-check"></i> Core Web Vitals</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEBSITE DESIGNING -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>🎨 Website Designing</h2>
+            <p>Modern, conversion-focused design in Figma.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card reveal">
+                <h3>Landing Page</h3>
+                <div class="price">₹2,999</div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 1 Page</li>
+                    <li><i class="fa-solid fa-check"></i> Hero Section</li>
+                    <li><i class="fa-solid fa-check"></i> Mobile Layout</li>
                 </ul>
                 <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Plan</a>
             </div>
             <div class="price-card featured reveal">
-                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">BEST VALUE</div>
-                <h3>SEO & Indexing</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Rank locally and globally</p>
-                <div class="price">₹2,999<span>/mo</span></div>
+                <h3>Multi-page</h3>
+                <div class="price">₹5,999</div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Google Search Console</li>
-                    <li><i class="fa-solid fa-check"></i> GA4 Setup</li>
-                    <li><i class="fa-solid fa-check"></i> On-page SEO</li>
-                    <li><i class="fa-solid fa-check"></i> Sitemap Submission</li>
+                    <li><i class="fa-solid fa-check"></i> 6 Pages</li>
+                    <li><i class="fa-solid fa-check"></i> Design System</li>
+                    <li><i class="fa-solid fa-check"></i> Interactive Prototype</li>
                 </ul>
                 <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Choose Plan</a>
             </div>
             <div class="price-card reveal">
-                <h3>Website Designing</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Modern, conversion-focused design</p>
-                <div class="price">₹2,999<span>+</span></div>
+                <h3>Full UI/UX</h3>
+                <div class="price">₹12,999+</div>
                 <ul>
-                    <li><i class="fa-solid fa-check"></i> Figma wireframes</li>
-                    <li><i class="fa-solid fa-check"></i> Interactive prototype</li>
-                    <li><i class="fa-solid fa-check"></i> Brand colour system</li>
-                    <li><i class="fa-solid fa-check"></i> 2 revisions</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Screens</li>
+                    <li><i class="fa-solid fa-check"></i> Handoff Files</li>
+                    <li><i class="fa-solid fa-check"></i> Brand Guidelines</li>
                 </ul>
-                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Plan</a>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Contact Sales</a>
             </div>
         </div>
+    </section>
 
-        <div class="pricing-grid" style="margin-top: 30px;">
+    <!-- SOCIAL MEDIA + LOGO + ADS -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>📣 Marketing & Branding</h2>
+            <p>Social Media, Logo, and Google Ads packages.</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- SMM -->
             <div class="price-card reveal">
                 <h3>Social Media Marketing</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Content, posts, page management</p>
                 <div class="price">₹2,499<span>/mo</span></div>
                 <ul>
                     <li><i class="fa-solid fa-check"></i> 15 posts/month</li>
@@ -100,10 +193,10 @@
                 </ul>
                 <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Plan</a>
             </div>
+            <!-- Logo -->
             <div class="price-card reveal">
                 <h3>Logo Designing</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Custom logo, typography, colour palette</p>
-                <div class="price">₹999<span>+</span></div>
+                <div class="price">₹999+</div>
                 <ul>
                     <li><i class="fa-solid fa-check"></i> 3 Concepts</li>
                     <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
@@ -112,9 +205,9 @@
                 </ul>
                 <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Plan</a>
             </div>
+            <!-- Ads -->
             <div class="price-card reveal">
                 <h3>Google Ads</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Search, display, local ads</p>
                 <div class="price">₹2,999<span>/mo</span></div>
                 <ul>
                     <li><i class="fa-solid fa-check"></i> Keyword Research</li>
@@ -127,6 +220,7 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="section" style="text-align: center;">
         <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Need a Custom Quote?</h2>
         <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Every business is unique. Let's discuss your specific requirements.</p>
@@ -162,24 +256,4 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved. Built by Vikas Kumar Mishra.</div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                document.querySelectorAll('.reveal').forEach(function(el) {
-                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
-                });
-            });
-            document.querySelectorAll('.reveal').forEach(function(el) {
-                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
-            });
-            document.querySelectorAll('.faq-question').forEach(function(q) {
-                q.addEventListener('click', function() {
-                    q.parentElement.classList.toggle('active');
-                });
-            });
-        });
-        function toggleMenu() {
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        }
-    </script>
     </body></html>
