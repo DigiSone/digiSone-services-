@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | DigiSone Services</title>
-    <meta name="description" content="Privacy Policy">
+    <meta name="description" content="DigiSone Privacy Policy. Learn how we collect, use, and protect your data.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-content { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .legal-content h2 { font-size: 1.8rem; margin: 40px 0 20px; color: var(--text); border-bottom: 2px solid var(--surface); padding-bottom: 10px; }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content h3 { font-size: 1.3rem; margin: 25px 0 15px; color: var(--text); }
+        .legal-content p, .legal-content li { color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px; }
+        .legal-content ul { margin-left: 20px; margin-bottom: 20px; }
+        .legal-content strong { color: var(--text); }
+        .last-updated { background: #e0e7ff; color: var(--primary); padding: 15px 25px; border-radius: 12px; font-weight: 600; margin-bottom: 40px; display: inline-block; }
+    </style>
 </head>
 <body>
+    
     <nav class="navbar">
-        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
                     <a href="digital-marketing.html">Digital Marketing</a>
                 </div>
             </li>
-            <li><a href="portfolio.html" class="">Portfolio</a></li>
-            <li><a href="pricing.html" class="">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -40,18 +53,79 @@
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
     
-    <header class="page-header"><h1 class="reveal">Privacy <span class="gradient-text">Policy</span></h1></header>
-    <section class="section" style="max-width: 800px; margin: 0 auto; color: var(--muted);">
-        <p class="reveal" style="margin-bottom: 20px;"><strong>1. Information We Collect:</strong> We collect your name, email, and project details only when you fill out our contact form.</p>
-        <p class="reveal" style="margin-bottom: 20px;"><strong>2. How We Use It:</strong> This data is strictly used to communicate with you about your project.</p>
-        <p class="reveal" style="margin-bottom: 20px;"><strong>3. Cookies:</strong> We may use basic cookies to analyze website traffic.</p>
-        <p class="reveal"><strong>4. Contact:</strong> For any privacy concerns, email digisoneglobal@gmail.com.</p>
+
+    <header class="page-header">
+        <div class="reveal">
+            <h1>Privacy <span class="gradient-text">Policy</span></h1>
+            <p>Your privacy is important to us. This policy explains how we handle your data.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="legal-content reveal">
+            <div class="last-updated"><i class="fa-solid fa-calendar"></i> Last Updated: May 2024</div>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to DigiSone Services ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website at <strong>services.digisone.com</strong>.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p>We collect personal information that you voluntarily provide to us when you fill out our contact form, subscribe to our newsletter, or communicate with us. This includes:</p>
+            <ul>
+                <li><strong>Personal Details:</strong> Full name, email address, company name, phone number.</li>
+                <li><strong>Project Details:</strong> Information about your project requirements, budget, and timeline.</li>
+                <li><strong>Technical Data:</strong> IP address, browser type, operating system, and browsing behavior (collected via cookies).</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect for legitimate business purposes, including:</p>
+            <ul>
+                <li>To respond to your inquiries and provide customer support.</li>
+                <li>To send you project proposals, invoices, and updates.</li>
+                <li>To improve our website, services, and user experience.</li>
+                <li>To comply with legal obligations.</li>
+            </ul>
+            <p><strong>We never sell your personal information to third parties.</strong></p>
+
+            <h2>4. Cookies and Third-Party Services</h2>
+            <p>We use cookies to enhance your browsing experience and analyze website traffic. We may also use third-party services such as:</p>
+            <ul>
+                <li><strong>Google Analytics:</strong> To understand how visitors interact with our site.</li>
+                <li><strong>Google AdSense:</strong> To display relevant advertisements. Google may use cookies to serve ads based on your prior visits to our site or other sites on the internet.</li>
+            </ul>
+            <p>You can opt-out of Google's use of cookies by visiting the <a href="https://adssettings.google.com/" target="_blank">Google Ads Settings</a> page.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your data, including SSL encryption, secure servers, and limited access to personal information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+            <h2>6. Your Privacy Rights</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> You can request a copy of the data we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> You can request corrections to inaccurate data.</li>
+                <li><strong>Right to Erasure:</strong> You can request deletion of your personal data (subject to legal obligations).</li>
+                <li><strong>Right to Object:</strong> You can object to the processing of your data for marketing purposes.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us at <strong>digisoneglobal@gmail.com</strong>.</p>
+
+            <h2>7. Children's Privacy</h2>
+            <p>Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.</p>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the "Last Updated" date.</p>
+
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+            <p><strong>DigiSone Global Enterprises</strong><br>
+            Email: <a href="mailto:digisoneglobal@gmail.com">digisoneglobal@gmail.com</a><br>
+            Website: services.digisone.com</p>
+        </div>
     </section>
 
+    
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
@@ -75,4 +149,21 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+    
+</body>
+</html>

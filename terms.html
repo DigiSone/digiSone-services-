@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | DigiSone Services</title>
-    <meta name="description" content="Terms of Service">
+    <meta name="description" content="DigiSone Terms of Service. Read the rules and regulations for using our website and services.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .legal-content { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+        .legal-content h2 { font-size: 1.8rem; margin: 40px 0 20px; color: var(--text); border-bottom: 2px solid var(--surface); padding-bottom: 10px; }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content p, .legal-content li { color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px; }
+        .legal-content ul { margin-left: 20px; margin-bottom: 20px; }
+        .legal-content strong { color: var(--text); }
+        .last-updated { background: #e0e7ff; color: var(--primary); padding: 15px 25px; border-radius: 12px; font-weight: 600; margin-bottom: 40px; display: inline-block; }
+    </style>
 </head>
 <body>
+    
     <nav class="navbar">
-        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
                     <a href="digital-marketing.html">Digital Marketing</a>
                 </div>
             </li>
-            <li><a href="portfolio.html" class="">Portfolio</a></li>
-            <li><a href="pricing.html" class="">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -40,18 +52,68 @@
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
     
-    <header class="page-header"><h1 class="reveal">Terms of <span class="gradient-text">Service</span></h1></header>
-    <section class="section" style="max-width: 800px; margin: 0 auto; color: var(--muted);">
-        <p class="reveal" style="margin-bottom: 20px;"><strong>1. Acceptance:</strong> By using this website, you agree to these terms.</p>
-        <p class="reveal" style="margin-bottom: 20px;"><strong>2. Intellectual Property:</strong> All content and designs are the property of DigiSone.</p>
-        <p class="reveal" style="margin-bottom: 20px;"><strong>3. Services:</strong> Service terms and pricing are defined in individual contracts.</p>
-        <p class="reveal"><strong>4. Liability:</strong> DigiSone is not liable for any indirect damages.</p>
+
+    <header class="page-header">
+        <div class="reveal">
+            <h1>Terms of <span class="gradient-text">Service</span></h1>
+            <p>Please read these terms carefully before using our website or services.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="legal-content reveal">
+            <div class="last-updated"><i class="fa-solid fa-calendar"></i> Last Updated: May 2024</div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the DigiSone Services website (<strong>services.digisone.com</strong>) or engaging our services, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you must not use our website or services.</p>
+
+            <h2>2. Services Provided</h2>
+            <p>DigiSone Global Enterprises provides web development, cloud infrastructure management, and digital marketing services. The specific scope, deliverables, timeline, and cost of each project will be outlined in a separate Service Agreement or Statement of Work (SOW) signed by both parties.</p>
+
+            <h2>3. Intellectual Property Rights</h2>
+            <p>Unless otherwise stated, all content on this website—including text, graphics, logos, code, and design—is the exclusive property of DigiSone Global Enterprises and is protected by international copyright laws.</p>
+            <p>For client projects: Upon full payment, the intellectual property rights of the final deliverables (code, designs) are transferred to the client, excluding any third-party libraries or pre-existing proprietary tools owned by DigiSone.</p>
+
+            <h2>4. Payments and Refunds</h2>
+            <ul>
+                <li><strong>Payment Terms:</strong> All projects require a 50% upfront deposit before work begins. The remaining 50% is due upon project completion and before final deployment.</li>
+                <li><strong>Monthly Plans:</strong> Subscription plans are billed monthly and can be canceled at any time.</li>
+                <li><strong>Refunds:</strong> We offer a 7-day money-back guarantee on monthly plans if you are not satisfied. However, custom project deposits are non-refundable once work has commenced.</li>
+            </ul>
+
+            <h2>5. Client Responsibilities</h2>
+            <p>To ensure timely project delivery, the client agrees to:</p>
+            <ul>
+                <li>Provide necessary content (text, images, logos) in a timely manner.</li>
+                <li>Respond to communication and provide feedback promptly.</li>
+                <li>Ensure that any content provided does not infringe on third-party copyrights or violate any laws.</li>
+            </ul>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>DigiSone Global Enterprises shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with the use of our website or services. This includes, but is not limited to, loss of profits, data, or business opportunities.</p>
+            <p>Our total liability for any claim shall not exceed the amount paid by you for the specific service in question.</p>
+
+            <h2>7. Third-Party Links and Services</h2>
+            <p>Our website may contain links to third-party websites (e.g., Cloudflare, AWS, Google). We are not responsible for the content, privacy policies, or practices of these third-party sites.</p>
+
+            <h2>8. Termination</h2>
+            <p>We reserve the right to terminate or suspend your access to our website or services immediately, without prior notice, if you breach these Terms of Service or engage in any unlawful activity.</p>
+
+            <h2>9. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts in India.</p>
+
+            <h2>10. Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at:</p>
+            <p><strong>DigiSone Global Enterprises</strong><br>
+            Email: <a href="mailto:digisoneglobal@gmail.com">digisoneglobal@gmail.com</a></p>
+        </div>
     </section>
 
+    
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
@@ -75,4 +137,21 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+    
+</body>
+</html>
