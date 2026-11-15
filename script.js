@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Cursor
     const dot = document.querySelector('.cursor-dot');
     const outline = document.querySelector('.cursor-outline');
     if (window.innerWidth > 768 && dot) {
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll effects
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;

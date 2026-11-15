@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://digisone-services.pages.dev/sitemap.xml
+Sitemap: https://services.digisone.com/sitemap.xml
