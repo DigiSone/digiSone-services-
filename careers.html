@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | DigiSone Services</title>
+    <meta name="description" content="Join the DigiSone team. Explore open positions in engineering, design, and marketing.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Careers Specific Styles */
+        .job-card { background: white; border: 1px solid var(--border); padding: 35px; border-radius: 20px; margin-bottom: 20px; transition: 0.3s; box-shadow: var(--shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .job-card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+        .job-info h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .job-meta { display: flex; gap: 15px; flex-wrap: wrap; }
+        .job-meta span { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--muted); font-weight: 600; }
+        .job-meta i { color: var(--primary); }
+        
+        .perk-card { background: white; border: 1px solid var(--border); padding: 30px; border-radius: 16px; text-align: center; box-shadow: var(--shadow); transition: 0.3s; }
+        .perk-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .perk-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+        .perk-card h4 { font-size: 1.2rem; margin-bottom: 10px; }
+        .perk-card p { color: var(--muted); font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <div class="dropdown-menu">
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="cloud.html">Cloud Infrastructure</a>
+                    <a href="digital-marketing.html">Digital Marketing</a>
+                </div>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
+        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
+        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
+    </div>
+
+    <!-- HERO -->
+    <header class="page-header">
+        <div class="reveal">
+            <h1>Join Our <span class="gradient-text">Team</span></h1>
+            <p>We are a remote-first team of passionate engineers, designers, and marketers. We build products that matter, and we're always looking for exceptional talent to join us.</p>
+            <div style="margin-top: 30px;">
+                <a href="#openings" class="btn-primary">View Open Positions <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PERKS / WHY WORK WITH US -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Why Work With Us?</h2>
+            <p>We believe in taking care of our team, so you can do your best work.</p>
+        </div>
+        <div class="grid">
+            <div class="perk-card reveal">
+                <i class="fa-solid fa-house-laptop"></i>
+                <h4>Remote-First Culture</h4>
+                <p>Work from anywhere in the world. We care about results, not hours logged in an office.</p>
+            </div>
+            <div class="perk-card reveal">
+                <i class="fa-solid fa-book-open"></i>
+                <h4>Learning Budget</h4>
+                <p>$500/year for courses, books, and conferences. We invest in your growth.</p>
+            </div>
+            <div class="perk-card reveal">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h4>Health & Wellness</h4>
+                <p>Comprehensive health insurance and mental health support for you and your family.</p>
+            </div>
+            <div class="perk-card reveal">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Stock Options</h4>
+                <p>We want you to own a piece of what you build. Early employees get equity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPEN POSITIONS -->
+    <section class="section" id="openings" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Open Positions</h2>
+            <p>Find your next role and help us build the future.</p>
+        </div>
+        
+        <div class="job-card reveal">
+            <div class="job-info">
+                <h3>Senior Frontend Engineer</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+                    <span><i class="fa-solid fa-code"></i> React / Next.js</span>
+                </div>
+            </div>
+            <a href="mailto:digisoneglobal@gmail.com?subject=Application: Senior Frontend Engineer" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="job-card reveal">
+            <div class="job-info">
+                <h3>Cloud DevOps Engineer</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+                    <span><i class="fa-solid fa-server"></i> AWS / Cloudflare</span>
+                </div>
+            </div>
+            <a href="mailto:digisoneglobal@gmail.com?subject=Application: Cloud DevOps Engineer" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="job-card reveal">
+            <div class="job-info">
+                <h3>UI/UX Designer</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+                    <span><i class="fa-solid fa-palette"></i> Figma</span>
+                </div>
+            </div>
+            <a href="mailto:digisoneglobal@gmail.com?subject=Application: UI/UX Designer" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="job-card reveal">
+            <div class="job-info">
+                <h3>Digital Marketing Manager</h3>
+                <div class="job-meta">
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                    <span><i class="fa-solid fa-clock"></i> Full-Time</span>
+                    <span><i class="fa-solid fa-bullhorn"></i> SEO / PPC</span>
+                </div>
+            </div>
+            <a href="mailto:digisoneglobal@gmail.com?subject=Application: Digital Marketing Manager" class="btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- HIRING PROCESS -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Our Hiring Process</h2>
+            <p>Transparent, fast, and respectful of your time.</p>
+        </div>
+        <div class="process-step reveal"><h4><span>1</span> Application Review</h4><p>We review your resume and portfolio within 3-5 business days. No black holes—you'll hear back from us.</p></div>
+        <div class="process-step reveal"><h4><span>2</span> Intro Call</h4><p>A 30-minute call with our HR to discuss your experience, goals, and our culture.</p></div>
+        <div class="process-step reveal"><h4><span>3</span> Technical Interview</h4><p>A 60-minute technical discussion or a small take-home task (paid, if it takes more than 2 hours).</p></div>
+        <div class="process-step reveal"><h4><span>4</span> Offer & Onboarding</h4><p>If we're a good fit, we'll send you an offer within 48 hours. Welcome aboard!</p></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Don't See a Perfect Fit?</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">We are always looking for exceptional talent. Send us your resume and tell us how you can contribute.</p>
+        <a href="mailto:digisoneglobal@gmail.com?subject=General Application" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Send Your Resume <i class="fa-solid fa-envelope"></i></a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
+                <p>A premium initiative by DigiSone Global Enterprises.</p>
+                <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="cloud.html">Cloud</a>
+                <a href="digital-marketing.html">Marketing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
