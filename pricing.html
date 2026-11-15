@@ -3,31 +3,73 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | DigiSone Services</title>
-    <meta name="description" content="Transparent pricing.">
+    <meta name="description" content="Transparent pricing plans for web development, cloud infrastructure, and digital marketing. No hidden fees.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Pricing Table Specific Styles */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start; margin-bottom: 60px; }
+        .price-card { background: white; border: 1px solid var(--border); padding: 50px 40px; border-radius: 20px; text-align: center; position: relative; transition: 0.3s; box-shadow: var(--shadow); }
+        .price-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .price-card.featured { border-color: var(--primary); background: linear-gradient(180deg, #f5f3ff, white); transform: scale(1.02); }
+        .price-card.featured:hover { transform: scale(1.02) translateY(-5px); }
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .price-card .price { font-size: 3rem; margin: 20px 0; font-weight: 800; color: var(--text); }
+        .price-card .price span { font-size: 1rem; color: var(--muted); font-weight: 400; }
+        .price-card ul { list-style: none; margin: 30px 0; text-align: left; }
+        .price-card ul li { margin-bottom: 15px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+        .price-card ul li i { color: var(--primary); }
+
+        /* Comparison Table */
+        .table-container { overflow-x: auto; margin-top: 40px; }
+        .comparison-table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+        .comparison-table th, .comparison-table td { padding: 20px; text-align: left; border-bottom: 1px solid var(--border); }
+        .comparison-table th { background: var(--surface); font-weight: 700; color: var(--text); }
+        .comparison-table td { color: var(--muted); }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table .check { color: var(--primary); font-size: 1.2rem; }
+        .comparison-table .cross { color: #ef4444; font-size: 1.2rem; }
+        
+        /* FAQ */
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .faq-question { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text); transition: 0.3s; }
+        .faq-question:hover { background: var(--surface); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s; padding: 0 25px; color: var(--muted); }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 0 25px 25px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        /* Trust Badges */
+        .trust-badges { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px; }
+        .trust-badge { display: flex; align-items: center; gap: 10px; color: var(--muted); font-weight: 600; }
+        .trust-badge i { color: #10b981; font-size: 1.2rem; }
+    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                <a href="services.html">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
                     <a href="digital-marketing.html">Digital Marketing</a>
                 </div>
             </li>
-            <li><a href="portfolio.html" class="">Portfolio</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="pricing.html" class="active">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
+    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -39,18 +81,176 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
-    
-    <header class="page-header"><h1 class="reveal">Transparent <span class="gradient-text">Pricing</span></h1><p class="reveal">No hidden fees. Choose a plan that fits your business stage.</p></header>
-    <section class="section"><div class="pricing-grid">
-        <div class="price-card reveal"><h3>Starter</h3><div class="price">$499<span>/mo</span></div><ul><li><i class="fa-solid fa-check"></i> 5-Page Business Website</li><li><i class="fa-solid fa-check"></i> Basic SEO Setup</li><li><i class="fa-solid fa-check"></i> Email Support (48h)</li><li><i class="fa-solid fa-check"></i> 1 Revision Round</li></ul><a href="contact.html" class="btn-secondary">Choose Plan</a></div>
-        <div class="price-card featured reveal"><h3>Growth</h3><div class="price">$999<span>/mo</span></div><ul><li><i class="fa-solid fa-check"></i> Custom Web App / E-Com</li><li><i class="fa-solid fa-check"></i> Advanced SEO & Analytics</li><li><i class="fa-solid fa-check"></i> 24/7 Priority Support</li><li><i class="fa-solid fa-check"></i> Unlimited Revisions</li><li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li></ul><a href="contact.html" class="btn-primary">Choose Plan</a></div>
-        <div class="price-card reveal"><h3>Enterprise</h3><div class="price">Custom</div><ul><li><i class="fa-solid fa-check"></i> Full Cloud Architecture</li><li><i class="fa-solid fa-check"></i> Dedicated DevOps Team</li><li><i class="fa-solid fa-check"></i> SLA & 99.9% Uptime</li><li><i class="fa-solid fa-check"></i> Custom Integrations</li></ul><a href="contact.html" class="btn-secondary">Contact Sales</a></div>
-    </div></section>
 
+    <!-- HERO -->
+    <header class="page-header">
+        <div class="reveal">
+            <h1>Transparent <span class="gradient-text">Pricing</span></h1>
+            <p>No hidden fees. No surprise charges. Choose a plan that fits your business stage. All plans include our industry-leading support.</p>
+        </div>
+    </header>
+
+    <!-- PRICING CARDS -->
+    <section class="section" style="padding-top: 0;">
+        <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="price-card reveal">
+                <h3>Starter</h3>
+                <p style="color: var(--muted); font-size: 0.9rem;">Perfect for small businesses</p>
+                <div class="price">$499<span>/mo</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> 5-Page Business Website</li>
+                    <li><i class="fa-solid fa-check"></i> Basic SEO Setup</li>
+                    <li><i class="fa-solid fa-check"></i> Mobile Responsive</li>
+                    <li><i class="fa-solid fa-check"></i> Email Support (48h)</li>
+                    <li><i class="fa-solid fa-check"></i> 1 Revision Round</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Choose Starter</a>
+            </div>
+
+            <!-- Growth (Featured) -->
+            <div class="price-card featured reveal">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">MOST POPULAR</div>
+                <h3>Growth</h3>
+                <p style="color: var(--muted); font-size: 0.9rem;">For growing businesses</p>
+                <div class="price">$999<span>/mo</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Custom Web App / E-Com</li>
+                    <li><i class="fa-solid fa-check"></i> Advanced SEO & Analytics</li>
+                    <li><i class="fa-solid fa-check"></i> Cloud Hosting Setup</li>
+                    <li><i class="fa-solid fa-check"></i> 24/7 Priority Support</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+                </ul>
+                <a href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">Choose Growth</a>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="price-card reveal">
+                <h3>Enterprise</h3>
+                <p style="color: var(--muted); font-size: 0.9rem;">For large-scale operations</p>
+                <div class="price">Custom</div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Full Cloud Architecture</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated DevOps Team</li>
+                    <li><i class="fa-solid fa-check"></i> SLA & 99.9% Uptime</li>
+                    <li><i class="fa-solid fa-check"></i> Custom Integrations</li>
+                    <li><i class="fa-solid fa-check"></i> Security Audits</li>
+                    <li><i class="fa-solid fa-check"></i> 24/7 Phone Support</li>
+                </ul>
+                <a href="contact.html" class="btn-secondary" style="width: 100%; justify-content: center;">Contact Sales</a>
+            </div>
+        </div>
+
+        <!-- TRUST BADGES -->
+        <div class="trust-badges reveal">
+            <div class="trust-badge"><i class="fa-solid fa-shield-halved"></i> No Hidden Fees</div>
+            <div class="trust-badge"><i class="fa-solid fa-clock"></i> Cancel Anytime</div>
+            <div class="trust-badge"><i class="fa-solid fa-headset"></i> 24/7 Support</div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Compare Plans</h2>
+            <p>See exactly what's included in each plan.</p>
+        </div>
+        <div class="table-container reveal">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Starter</th>
+                        <th>Growth</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pages / Screens</td>
+                        <td>Up to 5</td>
+                        <td>Up to 15</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Design</td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>SEO Optimization</td>
+                        <td>Basic</td>
+                        <td>Advanced</td>
+                        <td>Enterprise</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Hosting</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Custom Web App</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Support</td>
+                        <td>Email (48h)</td>
+                        <td>24/7 Priority</td>
+                        <td>24/7 Phone + SLA</td>
+                    </tr>
+                    <tr>
+                        <td>Dedicated Manager</td>
+                        <td><i class="fa-solid fa-xmark cross"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                        <td><i class="fa-solid fa-check check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Pricing FAQs</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item reveal">
+                <div class="faq-question">Are there any setup fees? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>No. There are zero setup fees. You only pay the monthly plan cost. However, for custom domains, you may need to purchase the domain separately from a registrar like Namecheap.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">Can I change my plan later? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Absolutely. You can upgrade or downgrade your plan at any time. If you upgrade, the new price will be prorated for the current month.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">Do you offer a refund? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Yes, we offer a 7-day money-back guarantee if you are not satisfied with our service. Please refer to our Terms of Service for details.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">What payment methods do you accept? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>We accept all major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers for Enterprise plans.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Need a Custom Quote?</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Every business is unique. Let's discuss your specific requirements.</p>
+        <a href="contact.html" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
@@ -74,4 +274,28 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(function(q) {
+                q.addEventListener('click', function() {
+                    q.parentElement.classList.toggle('active');
+                });
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
