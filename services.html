@@ -3,63 +3,173 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | DigiSone Services</title>
-    <meta name="description" content="End-to-end digital solutions.">
+    <meta name="description" content="Explore our enterprise-grade services: Web Development, Cloud Infrastructure, and Digital Marketing.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Page-specific styles for Services */
+        .service-hero { padding: 160px 5% 80px; text-align: center; background: radial-gradient(circle at top, #e0e7ff, transparent 60%); }
+        .service-hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -2px; line-height: 1.05; }
+        .service-hero p { color: var(--muted); font-size: 1.25rem; max-width: 800px; margin: 0 auto; }
+        
+        .service-detail { display: flex; gap: 50px; align-items: flex-start; margin-bottom: 80px; }
+        .service-detail.reverse { flex-direction: row-reverse; }
+        .service-info { flex: 1; }
+        .service-info h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .service-info p { color: var(--muted); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8; }
+        .service-features { list-style: none; margin: 30px 0; }
+        .service-features li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; color: var(--text); font-size: 1rem; }
+        .service-features li i { color: var(--primary); margin-top: 5px; }
+        .service-image { flex: 1; background: var(--surface); border-radius: 20px; padding: 40px; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; }
+        .service-image i { font-size: 4rem; color: var(--primary); margin-bottom: 20px; }
+        .service-image h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .service-image p { color: var(--muted); font-size: 0.95rem; }
+        
+        @media (max-width: 900px) {
+            .service-detail, .service-detail.reverse { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone
-        </a>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
                     <a href="digital-marketing.html">Digital Marketing</a>
                 </div>
             </li>
-            <li><a href="portfolio.html" class="">Portfolio</a></li>
-            <li><a href="pricing.html" class="">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
-            <li><a href="contact.html" class="btn-contact">Hire Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
+    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
+        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
+        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
-    
-    <header class="page-header"><h1 class="reveal">Our <span class="gradient-text">Services</span></h1><p class="reveal">We provide a complete suite of IT and digital services.</p></header>
+
+    <!-- HERO -->
+    <header class="service-hero">
+        <div class="reveal">
+            <h1>Our <span class="gradient-text">Services</span></h1>
+            <p>We provide a complete suite of enterprise-grade IT and digital services. From building high-performance websites to managing global cloud infrastructure, we are your end-to-end technology partner.</p>
+        </div>
+    </header>
+
+    <!-- SERVICES DETAIL -->
     <section class="section">
-        <div class="grid">
-            <a href="web-dev.html" class="card reveal"><i class="fa-solid fa-code"></i><h3>Web Development</h3><p>Custom, high-performance web applications built for scale.</p></a>
-            <a href="cloud.html" class="card reveal"><i class="fa-solid fa-server"></i><h3>Cloud Infrastructure</h3><p>Global edge deployment and serverless architecture.</p></a>
-            <a href="digital-marketing.html" class="card reveal"><i class="fa-solid fa-chart-line"></i><h3>Digital Marketing</h3><p>Data-driven SEO, PPC, and content strategies.</p></a>
+        <!-- Service 1: Web Dev -->
+        <div class="service-detail reveal">
+            <div class="service-info">
+                <h2>Web Development & Engineering</h2>
+                <p>We don't just build websites; we engineer high-performance digital products that convert visitors into customers. Every line of code is written with scalability, security, and speed in mind.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Corporate Websites:</strong> SEO-optimized, CMS-driven sites for global brands.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>E-Commerce:</strong> Secure stores with Stripe/PayPal integration.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Custom Web Apps:</strong> Dashboards, CRMs, and internal tools.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Progressive Web Apps (PWA):</strong> App-like experiences on the web.</div></li>
+                </ul>
+                <a href="web-dev.html" class="btn-primary">Explore Web Development <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="service-image">
+                <i class="fa-solid fa-code"></i>
+                <h3>Built for Scale</h3>
+                <p>React, Next.js, Node.js, and modern frameworks for lightning-fast performance.</p>
+            </div>
+        </div>
+
+        <!-- Service 2: Cloud -->
+        <div class="service-detail reverse reveal">
+            <div class="service-info">
+                <h2>Cloud Infrastructure & DevOps</h2>
+                <p>We build resilient, global-scale cloud architectures that never go down. From edge computing to serverless functions, we ensure your app is always fast and available.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Edge Computing:</strong> Deploy to 300+ data centers via Cloudflare.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Serverless:</strong> AWS Lambda & Cloudflare Workers for auto-scaling.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>CI/CD Pipelines:</strong> Automated deployments with GitHub Actions.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Security & DDoS:</strong> Enterprise-grade WAF and zero-trust security.</div></li>
+                </ul>
+                <a href="cloud.html" class="btn-primary">Explore Cloud Infrastructure <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="service-image">
+                <i class="fa-solid fa-server"></i>
+                <h3>Global Reach</h3>
+                <p>Your app is served from 300+ data centers worldwide. Latency is a thing of the past.</p>
+            </div>
+        </div>
+
+        <!-- Service 3: Marketing -->
+        <div class="service-detail reveal">
+            <div class="service-info">
+                <h2>Digital Marketing & Growth</h2>
+                <p>We don't just get you traffic; we get you customers. Our data-driven marketing strategies are designed to maximize ROI and build your brand presence.</p>
+                <ul class="service-features">
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>SEO:</strong> On-page, off-page, and technical SEO to rank #1.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>PPC Ads:</strong> Google Ads and Meta Ads for immediate conversions.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Content Marketing:</strong> High-quality blogs and copy that converts.</div></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <div><strong>Social Media:</strong> Building brand presence across all platforms.</div></li>
+                </ul>
+                <a href="digital-marketing.html" class="btn-primary">Explore Digital Marketing <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="service-image">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Data-Driven Growth</h3>
+                <p>Advanced analytics and strategies to dominate your market and drive revenue.</p>
+            </div>
         </div>
     </section>
 
+    <!-- WHY CHOOSE US -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Why Choose Our Services?</h2>
+            <p>We combine deep technical expertise with a relentless focus on business outcomes.</p>
+        </div>
+        <div class="grid">
+            <div class="card reveal"><i class="fa-solid fa-bolt"></i><h3>Ultra-Fast Performance</h3><p>We leverage Edge Computing and optimized code to ensure your product loads in milliseconds.</p></div>
+            <div class="card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Enterprise Security</h3><p>Bank-grade security protocols, DDoS protection, and zero-trust architecture.</p></div>
+            <div class="card reveal"><i class="fa-solid fa-headset"></i><h3>24/7 Support</h3><p>Our expert engineering team is available round the clock to monitor and maintain.</p></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Start Your Project?</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Let's discuss how we can help you achieve your business goals.</p>
+        <a href="contact.html" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Book a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>DigiSone</h3>
-                <p>Premium IT Solutions by DigiSone Global Enterprises.</p>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
+                <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
                 <a href="about.html">About Us</a>
-                <a href="portfolio.html">Our Work</a>
+                <a href="careers.html">Careers</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
@@ -76,4 +186,21 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
