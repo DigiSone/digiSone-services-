@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing | DigiSone Services</title>
-    <meta name="description" content="SEO, Ads, and Content.">
+    <meta name="description" content="Data-driven digital marketing. SEO, PPC, Content, and Social Media strategies that generate revenue.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .tech-item { background: white; border: 1px solid var(--border); padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
+        .tech-item:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .tech-item i { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+        .tech-item h4 { font-size: 1.1rem; }
+        
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 15px; overflow: hidden; box-shadow: var(--shadow); }
+        .faq-question { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.1rem; color: var(--text); transition: 0.3s; }
+        .faq-question:hover { background: var(--surface); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s; padding: 0 25px; color: var(--muted); }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 0 25px 25px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+    </style>
 </head>
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
+        <a href="index.html" class="logo"><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone <span>Services</span></a>
         <ul class="nav-links">
-            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
                 <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
@@ -21,13 +38,15 @@
                     <a href="digital-marketing.html">Digital Marketing</a>
                 </div>
             </li>
-            <li><a href="portfolio.html" class="">Portfolio</a></li>
-            <li><a href="pricing.html" class="">Pricing</a></li>
-            <li><a href="about.html" class="">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
+
+    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -39,28 +58,140 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
-    
-    <header class="page-header"><h1 class="reveal">Digital <span class="gradient-text">Marketing</span></h1><p class="reveal">We don't just get you traffic; we get you customers.</p></header>
+
+    <!-- HERO -->
+    <header class="page-header">
+        <div class="reveal">
+            <h1>Digital <span class="gradient-text">Marketing</span></h1>
+            <p>We don't just get you traffic; we get you customers. Our data-driven marketing strategies are engineered to maximize ROI, build your brand, and generate qualified leads.</p>
+            <div style="margin-top: 30px;">
+                <a href="contact.html" class="btn-primary">Boost Your Sales <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- WHAT WE HANDLE -->
     <section class="section">
-        <div class="section-header reveal"><h2>Our Marketing Services</h2></div>
-        <ul class="feature-list reveal">
-            <li><i class="fa-solid fa-check-circle"></i> <div><strong>Search Engine Optimization (SEO):</strong> On-page, off-page, and technical SEO to rank #1 on Google. We do keyword research, content optimization, and link building.</div></li>
-            <li><i class="fa-solid fa-check-circle"></i> <div><strong>Pay-Per-Click (PPC):</strong> Google Ads and Meta Ads management for immediate ROI. We optimize your ad spend for maximum conversions.</div></li>
-            <li><i class="fa-solid fa-check-circle"></i> <div><strong>Content Marketing:</strong> High-quality blogs, articles, and copywriting that convert. We create content that your audience actually wants to read.</div></li>
-            <li><i class="fa-solid fa-check-circle"></i> <div><strong>Social Media Management:</strong> Building your brand presence across LinkedIn, Twitter, and Instagram. We handle strategy, creation, and engagement.</div></li>
-        </ul>
-    </section>
-    <section class="section" style="background: var(--surface); border-radius: 24px;">
-        <div class="section-header reveal"><h2>Frequently Asked Questions</h2></div>
-        <div class="faq-item reveal"><div class="faq-question">How long does SEO take? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer"><p>SEO is a long-term strategy. You can expect to see significant results in 3 to 6 months. However, the exact timeline depends on your industry, competition, and current website health.</p></div></div>
-        <div class="faq-item reveal"><div class="faq-question">Do you provide monthly reports? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer"><p>Yes, we provide detailed analytics reports showing traffic, conversions, and ROI. We believe in complete transparency.</p></div></div>
-        <div class="faq-item reveal"><div class="faq-question">What is your pricing model? <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer"><p>We offer both monthly retainers and project-based pricing. Contact us for a custom quote based on your needs.</p></div></div>
+        <div class="section-header reveal">
+            <h2>Our Marketing Services</h2>
+            <p>Full-funnel marketing solutions designed to scale your business.</p>
+        </div>
+        <div class="grid">
+            <div class="card reveal">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Search Engine Optimization (SEO)</h3>
+                <p>On-page, off-page, and technical SEO to rank #1 on Google. We do deep keyword research, content optimization, and high-authority link building to drive organic traffic.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h3>Pay-Per-Click (PPC) Advertising</h3>
+                <p>Google Ads and Meta Ads management for immediate ROI. We optimize your ad spend, A/B test creatives, and target high-intent audiences to maximize conversions.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>Content Marketing</h3>
+                <p>High-quality blogs, articles, and copywriting that convert. We create content that your audience actually wants to read, building trust and authority for your brand.</p>
+            </div>
+            <div class="card reveal">
+                <i class="fa-solid fa-hashtag"></i>
+                <h3>Social Media Management</h3>
+                <p>Building your brand presence across LinkedIn, Twitter, and Instagram. We handle strategy, content creation, community engagement, and paid social campaigns.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- TECH STACK -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Our Marketing Stack</h2>
+            <p>We use industry-leading tools to track, analyze, and optimize every campaign.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-item reveal"><i class="fa-brands fa-google"></i><h4>Google Analytics</h4></div>
+            <div class="tech-item reveal"><i class="fa-brands fa-google"></i><h4>Google Ads</h4></div>
+            <div class="tech-item reveal"><i class="fa-brands fa-meta"></i><h4>Meta Ads</h4></div>
+            <div class="tech-item reveal"><i class="fa-solid fa-chart-line"></i><h4>SEMrush</h4></div>
+            <div class="tech-item reveal"><i class="fa-solid fa-link"></i><h4>Ahrefs</h4></div>
+            <div class="tech-item reveal"><i class="fa-solid fa-envelope"></i><h4>Mailchimp</h4></div>
+            <div class="tech-item reveal"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>Hotjar</h4></div>
+            <div class="tech-item reveal"><i class="fa-solid fa-palette"></i><h4>Canva</h4></div>
+        </div>
+    </section>
+
+    <!-- BENTO GRID (WHY US) -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Why Marketing with DigiSone?</h2>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item bento-large reveal">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Data-Driven Decisions</h3>
+                <p>We don't guess. Every campaign is backed by data. We track user behavior, analyze conversion funnels, and continuously optimize based on real numbers—not gut feelings.</p>
+            </div>
+            <div class="bento-item reveal">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>ROI Focused</h3>
+                <p>We focus on revenue, not vanity metrics. Every dollar you spend is tracked to ensure maximum return.</p>
+            </div>
+            <div class="bento-item reveal">
+                <i class="fa-solid fa-filter"></i>
+                <h3>Full Funnel</h3>
+                <p>From awareness to conversion. We target users at every stage of their journey.</p>
+            </div>
+            <div class="bento-item bento-large reveal">
+                <i class="fa-solid fa-file-invoice"></i>
+                <h3>Transparent Reporting</h3>
+                <p>You get detailed monthly reports showing exactly what we did, what worked, and where we are heading next. Complete transparency, always.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" style="background: var(--surface); border-radius: 24px;">
+        <div class="section-header reveal">
+            <h2>Our 4-Step Growth Process</h2>
+            <p>A proven framework to scale your digital presence.</p>
+        </div>
+        <div class="process-step reveal"><h4><span>1</span> Audit & Strategy</h4><p>We analyze your current online presence, competitors, and target audience to create a custom marketing strategy.</p></div>
+        <div class="process-step reveal"><h4><span>2</span> Execution</h4><p>We launch campaigns across the right channels (SEO, Ads, Content) with compelling creatives and copy.</p></div>
+        <div class="process-step reveal"><h4><span>3</span> Analyze & Optimize</h4><p>We monitor campaign performance daily. We A/B test, adjust bids, and refine targeting to improve ROI.</p></div>
+        <div class="process-step reveal"><h4><span>4</span> Scale</h4><p>Once we find a winning formula, we scale the budget and expand to new channels to maximize growth.</p></div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="section-header reveal">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item reveal">
+                <div class="faq-question">How long does SEO take? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>SEO is a long-term strategy. You can expect to see significant results in 3 to 6 months. However, the exact timeline depends on your industry, competition, and current website health.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">Do you provide monthly reports? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Yes, we provide detailed analytics reports showing traffic, conversions, and ROI. We believe in complete transparency.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-question">What is your pricing model? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>We offer both monthly retainers and project-based pricing. Contact us for a custom quote based on your needs.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center;">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 20px;">Ready to Scale Your Business?</h2>
+        <p class="reveal" style="color: var(--muted); margin-bottom: 40px; font-size: 1.1rem;">Let's discuss how we can drive more traffic and revenue for you.</p>
+        <a href="contact.html" class="btn-primary reveal" style="font-size: 1.1rem; padding: 18px 40px;">Get a Free Marketing Audit <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <h3><svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone Services</h3>
                 <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
@@ -84,4 +215,28 @@
         </div>
         <div class="footer-bottom">&copy; 2024 DigiSone Global Enterprises. All Rights Reserved.</div>
     </footer>
-    <script src="script.js"></script></body></html>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                document.querySelectorAll('.reveal').forEach(function(el) {
+                    if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+            });
+
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(function(q) {
+                q.addEventListener('click', function() {
+                    q.parentElement.classList.toggle('active');
+                });
+            });
+        });
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
