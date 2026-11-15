@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll Reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-        reveals.forEach((reveal) => {
-            const elementTop = reveal.getBoundingClientRect().top;
-            if (elementTop < window.innerHeight - 50) reveal.classList.add('active');
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.reveal').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
         });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    });
+    // Trigger on load
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 50) el.classList.add('active');
+    });
 
     // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(q => {

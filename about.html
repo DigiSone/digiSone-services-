@@ -4,20 +4,17 @@
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | DigiSone Services</title>
     <meta name="description" content="Learn about DigiSone.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2265%22 font-family=%22Arial%22 font-size=%2245%22 font-weight=%22900%22 fill=%22white%22 text-anchor=%22middle%22>V</text></svg>">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">
-            <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" /></linearGradient></defs><circle cx="50" cy="50" r="45" fill="url(#grad)" /><text x="50" y="65" font-family="Inter, sans-serif" font-size="45" font-weight="900" fill="white" text-anchor="middle">V</text></svg> DigiSone
-        </a>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fa-solid fa-cube"></i> DigiSone <span>Services</span></a>
         <ul class="nav-links">
             <li><a href="index.html" class="">Home</a></li>
             <li class="dropdown">
-                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;"></i></a>
+                <a href="services.html" class="">Services <i class="fa-solid fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
                 <div class="dropdown-menu">
                     <a href="web-dev.html">Web Development</a>
                     <a href="cloud.html">Cloud Infrastructure</a>
@@ -27,24 +24,27 @@
             <li><a href="portfolio.html" class="">Portfolio</a></li>
             <li><a href="pricing.html" class="">Pricing</a></li>
             <li><a href="about.html" class="active">About</a></li>
-            <li><a href="contact.html" class="btn-contact">Hire Me</a></li>
+            <li><a href="contact.html" class="btn-primary">Get Started</a></li>
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     </nav>
     <div class="mobile-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="web-dev.html" style="padding-left:20px; font-size:0.95rem;">- Web Development</a>
+        <a href="cloud.html" style="padding-left:20px; font-size:0.95rem;">- Cloud Infrastructure</a>
+        <a href="digital-marketing.html" style="padding-left:20px; font-size:0.95rem;">- Digital Marketing</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-primary" style="text-align:center; margin-top:10px;">Get Started</a>
     </div>
     
     <header class="page-header"><h1 class="reveal">About <span class="gradient-text">DigiSone</span></h1><p class="reveal">A premium tech initiative by DigiSone Global Enterprises.</p></header>
     <section class="section">
-        <h2 class="section-title reveal">Our Mission</h2>
-        <p class="reveal" style="text-align:center; max-width:800px; margin:0 auto; color:var(--text-muted); font-size:1.1rem;">To empower businesses globally by providing cutting-edge technology solutions. We believe that every business deserves enterprise-grade digital infrastructure.</p>
-        <h2 class="section-title reveal" style="margin-top: 60px;">Our Values</h2>
+        <div class="section-header reveal"><h2>Our Mission</h2></div>
+        <p class="reveal" style="text-align:center; max-width:800px; margin:0 auto; color:var(--muted); font-size:1.1rem;">To empower businesses globally by providing cutting-edge technology solutions. We believe that every business, regardless of size, deserves enterprise-grade digital infrastructure.</p>
+        <div class="section-header reveal" style="margin-top: 60px;"><h2>Our Values</h2></div>
         <div class="grid">
             <div class="card reveal"><i class="fa-solid fa-lightbulb"></i><h3>Innovation</h3><p>We stay ahead with modern tech stacks.</p></div>
             <div class="card reveal"><i class="fa-solid fa-shield-halved"></i><h3>Security</h3><p>We never compromise on data safety.</p></div>
@@ -55,14 +55,14 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>DigiSone</h3>
-                <p>Premium IT Solutions by DigiSone Global Enterprises.</p>
+                <h3><i class="fa-solid fa-cube"></i> DigiSone Services</h3>
+                <p>A premium initiative by DigiSone Global Enterprises.</p>
                 <p><i class="fa-solid fa-envelope"></i> digisoneglobal@gmail.com</p>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
                 <a href="about.html">About Us</a>
-                <a href="portfolio.html">Our Work</a>
+                <a href="careers.html">Careers</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
